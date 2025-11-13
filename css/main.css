@@ -264,20 +264,21 @@ a {
   margin: 5px 0;
 }
 
-.slider{
+/* Infinite Slider */
+.slider {
   overflow: hidden;
   padding: 3rem 1.6rem;
   position: relative;
   width: 100%;
 }
 
-.slider-container{
+.slider-container {
   display: flex;
   width: calc(200px * 10); /* largeur = nombre total d’images × largeur image */
   animation: scroll 20s linear infinite;
 }
 
-.slide{
+.slide {
   width: 12.5%;
   height: 30vh;
   flex-shrink: 0;
@@ -298,6 +299,72 @@ a {
     transform: translateX(-50%);
   }
 }
+
+/* Project section */
+
+#project {
+  padding: 3rem 1.6rem;
+}
+
+#project h1 {
+  text-transform: uppercase;
+  color: var(--nav-links-color);
+  font-size: 3.3rem;
+  line-height: 1.25em;
+  text-align: center;
+}
+
+#project h1 span {
+  color: var(--hover-color);
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 1.5rem;
+  margin-top: 5rem;
+}
+
+.project-container div {
+  background-color: var(--nav-links-color);
+  border-radius: 20px;
+  padding: 1.3rem 1.7rem;
+}
+
+.project-container div img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-container div h2{
+  font-size: 2.3rem;
+  color: var(--hover-color);
+  margin-bottom: 0;
+}
+
+.project-container div p{
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+.project-container div a{
+}
+
+.btn-second-style{
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  background-color: var(--black-color);
+  padding: 0.6rem 2rem;
+  color: var(--nav-links-color);
+  border-radius: 1.8rem;
+  border: solid 2px var(--black-color);
+  transition: all 0.4s ease-in-out;
+}
+
+/* .btn-second-style:hover{
+  
+} */
 
 /* =======================================
     Petits téléphones (0 - 480px)
@@ -414,7 +481,7 @@ a {
     font-size: 4.5rem;
   }
 
-  .about-infos p{
+  .about-infos p {
     font-size: 2.1rem;
     line-height: 1.4em;
   }
@@ -422,5 +489,4 @@ a {
   .item h3 {
     font-size: 3.5rem;
   }
-
 }
