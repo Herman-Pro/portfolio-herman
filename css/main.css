@@ -1,6 +1,426 @@
-* {
+/* Call fonts */
+@font-face {
+  font-family: "Poppins";
+  src: url("../font/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../font/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../font/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* set My variable */
+:root {
+  --black-color: #000;
+  --nav-links-color: #fff;
+  --hover-color: #cc0000;
+  --font-main: "Poppins", sans-serif;
+  --fs-h1: clamp(1.8rem, 2vw + 1rem, 3rem);
+  --fs-h2: clamp(1.4rem, 1.5vw + 1rem, 2.4rem);
+  --fs-h3: clamp(1.2rem, 1vw + 0.8rem, 2rem);
+  --fs-p: clamp(0.9rem, 0.5vw + 0.8rem, 1.2rem);
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: poppins;
+  font-family: var(--font-main);
+  background-color: #111;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  background-color: var(--black-color);
+  padding: 1rem 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+/* LOGO */
+.logo {
+  color: var(--nav-links-color);
+  font-size: 3.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Nav-links */
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  gap: 1rem;
+}
+
+.nav-links ul {
+  text-align: center;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+/* .nav-links li .active-link{
+  position: relative;
+  color: var(--hover-color);
+}
+
+.nav-links li .active-link::after{
+  content: "";
+  position: absolute;
+  left: 7px;
+  bottom: -3px;
+  width: 70%;
+  height: 2px;
+  background-color: var(--hover-color);
+} */
+
+.nav-links li a {
+  position: relative;
+  color: var(--nav-links-color);
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0.4rem;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--nav-links-color);
+  transition: all 0.4s ease-in-out;
+}
+
+.nav-links li a:hover {
+  color: var(--hover-color);
+}
+
+.nav-links li a:hover::after {
+  width: 70%;
+  background-color: var(--hover-color);
+}
+
+/* Menu hamburger */
+.hamburger {
+  display: none;
+}
+
+#banner {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 4.5rem 1.6rem;
+}
+
+/* Banner image */
+#banner img {
+  width: 35%;
+  object-fit: cover;
+  border-radius: 1.3rem;
+  box-shadow: 1px 1px 1px 1px 1px rgba(0, 0, 0, 0.65);
+}
+
+.profil-infos {
+  width: 50%;
+}
+
+/* Banner Title */
+.profil-infos h1 {
+  color: var(--nav-links-color);
+  font-size: 3.5rem;
+  line-height: 1.25em;
+}
+
+.profil-infos h1 span {
+  color: var(--hover-color);
+}
+
+/* Banner Description */
+.profil-infos p {
+  font-size: 1.4rem;
+  text-align: justify;
+  font-weight: 400;
+  line-height: 1.3em;
+  color: var(--nav-links-color);
+  margin-bottom: 3rem;
+}
+
+.btn-first-style {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  background-color: var(--hover-color);
+  padding: 0.6rem 2rem;
+  color: var(--nav-links-color);
+  border-radius: 1.8rem;
+  border: solid 2px var(--hover-color);
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-first-style:hover {
+  border-color: var(--nav-links-color);
+  color: var(--nav-links-color);
+}
+
+#about {
+  background-color: var(--nav-links-color);
+  padding: 3rem 1.6rem;
+}
+
+#about h1 {
+  text-transform: uppercase;
+  color: var(--black-color);
+  font-size: 3.3rem;
+  line-height: 1.25em;
+  text-align: center;
+}
+
+#about h1 span {
+  color: var(--hover-color);
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rem;
+}
+
+.about-container img {
+  width: 40%;
+  height: 60vh;
+  object-fit: cover;
+}
+
+.about-infos {
+  width: 53%;
+}
+
+.about-infos h2 {
+  font-size: 2.3rem;
+  color: var(--hover-color);
+  margin-bottom: 0;
+}
+
+.about-infos p {
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+.experiences-container {
+  display: grid;
+  width: 90%;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.2rem;
+  margin-top: 3.5rem;
+}
+
+.item {
+  border: solid 1px var(--black-color);
+  background-color: #fd767a;
+  border-radius: 20px;
+  padding: 0.7rem 1.1rem;
+  transition: all 0.4s ease;
+}
+
+.item:hover {
+  /* transform: scale(1); */
+}
+
+.item h3 {
+  font-size: 2.1rem;
+  margin: 5px 0;
+}
+
+.item p {
+  text-align: initial;
+  line-height: 1.2em;
+  margin: 5px 0;
+}
+
+.slider{
+  overflow: hidden;
+  padding: 3rem 1.6rem;
+  position: relative;
+  width: 100%;
+}
+
+.slider-container{
+  display: flex;
+  width: calc(200px * 10); /* largeur = nombre total d’images × largeur image */
+  animation: scroll 20s linear infinite;
+}
+
+.slide{
+  width: 12.5%;
+  height: 30vh;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Animation */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =======================================
+    Petits téléphones (0 - 480px)
+   ======================================= */
+@media (max-width: 480px) {
+}
+
+/* =======================================
+    Téléphones standards (481px - 576px)
+   ======================================= */
+@media (max-width: 576px) {
+}
+
+/* =======================================
+    Petits laptops / tablettes paysage (769px - 992px)
+   ======================================= */
+@media (max-width: 992px) {
+}
+
+/* =======================================
+    Laptops / écrans moyens (993px - 1280px)
+   ======================================= */
+@media (max-width: 1280px) {
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  .profil-infos h1 {
+    font-size: 3rem;
+    line-height: 3.3rem;
+  }
+
+  .profil-infos p {
+    font-size: 1rem;
+    line-height: 1.4em;
+  }
+
+  .btn-first-style {
+    font-size: 1rem;
+  }
+
+  #about h1 {
+    font-size: 3rem;
+  }
+
+  .about-infos h2 {
+    font-size: 2.1rem;
+  }
+
+  .about-infos p {
+    font-size: 0.9rem;
+  }
+}
+
+/* =======================================
+    Grands écrans (1280px - 1600px)
+   ======================================= */
+/* @media (max-width: 1600px) {
+} */
+
+/* =======================================
+   🖥️ Très grands écrans (1600px+)
+   ======================================= */
+@media (min-width: 1601px) {
+  .navbar {
+    padding: 1.3rem 3rem;
+  }
+
+  /* LOGO */
+  .logo {
+    font-size: 4.3rem;
+  }
+
+  .nav-links {
+    gap: 1.3rem;
+  }
+
+  .nav-links li a {
+    font-size: 1.7rem;
+  }
+
+  .profil-infos {
+    width: 55%;
+  }
+
+  #banner {
+    padding: 4rem 3rem;
+  }
+
+  .profil-infos h1 {
+    font-size: 6.5rem;
+    line-height: 6.4rem;
+  }
+
+  .profil-infos p {
+    font-size: 2.7rem;
+    line-height: 1.4em;
+  }
+
+  .btn-first-style {
+    font-size: 1.7rem;
+    border-radius: 7rem;
+  }
+
+  #about {
+    padding: 4rem 3rem;
+  }
+
+  #about h1 {
+    font-size: 6.5rem;
+    line-height: 6.4rem;
+  }
+
+  .about-infos h2 {
+    font-size: 4.5rem;
+  }
+
+  .about-infos p{
+    font-size: 2.1rem;
+    line-height: 1.4em;
+  }
+
+  .item h3 {
+    font-size: 3.5rem;
+  }
+
 }

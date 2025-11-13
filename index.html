@@ -8,8 +8,7 @@
 
   <title>Portfolio - Herman Audrey TOSSAVI</title>
 
-  <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/responsive.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -21,8 +20,8 @@
 
       <!-- Navbar links -->
       <ul class="nav-links">
-        <li><a href="#about">About me</a></li>
-        <li><a href="#project">My projects</a></li>
+        <li><a href="#about" class="active-link">About me</a></li>
+        <li><a href="#project">Projects</a></li>
         <li><a href="#service">Services</a></li>
         <li><a href="#contact">Contacts</a></li>
       </ul>
@@ -37,16 +36,74 @@
   </header>
   <main>
     <!-- Banner section -->
-    <section id="Banner">
-      <div>
-        <h1>Bonjour, je suis <span>Herman Audrey TOSSAVI</span></h1>
+    <section id="banner">
+      <div class="profil-infos">
+        <h1>Bonjour, je suis <br> <span>Herman Audrey TOSSAVI</span></h1>
         <p>Développeur web passionné en formation, prêt à créer des sites modernes et performants.</p>
         <div>
-          <a href="">About me</a>
-          <a href="">My Project</a>
+          <a href="#" class="btn-first-style">About me</a>
+          <a href="#" class="btn-first-style">My Project</a>
         </div>
       </div>
       <img src="img/IMG-20231209-WA0024.jpg" alt="image_of_Herman_TOSSAVI" class="profil-picture">
+    </section>
+
+    <!-- Section About -->
+    <section id="about">
+      <h1>About <span>Me</span></h1>
+
+      <div class="about-container">
+
+        <img src="img/aboutme-image.png" alt="">
+
+        <div class="about-infos">
+          <h2>TItre 2</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis omnis sint ad perspiciatis, at eligendi
+            cum quis modi, suscipit dolorem sequi voluptatibus similique vel aliquam, impedit incidunt fugiat. Eaque,
+            nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque repellendus vitae illo asperiores ab
+            impedit nisi omnis sequi, atque beatae numquam expedita ex, tempore, repellat voluptates velit enim veniam
+            fugiat.</p>
+          <div class="experiences-container">
+            <div class="item">
+              <h3>05</h3>
+              <p>years of experinces</p>
+            </div>
+            <div class="item">
+              <h3>199+</h3>
+              <p>Happy Clients</p>
+            </div>
+            <div class="item">
+              <h3>200+</h3>
+              <p>Project completed</p>
+            </div>
+            <div class="item">
+              <h3>1009+</h3>
+              <p>libeler</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider  -->
+      <h1>My <span>Skills</span></h1>
+      <div class="slider">
+        <div class="slider-container">
+          <div class="slide"><img src="img/logo-html.png" alt="Logo html"></div>
+          <div class="slide"><img src="img/logo-css.png" alt="Logo css"></div>
+          <div class="slide"><img src="img/logo-javascript.png" alt="Logo javascript"></div>
+          <div class="slide"><img src="img/logo-bootstrap-removebg-preview.png" alt="Logo boostrap"></div>
+          <div class="slide"><img src="img/logo-react-removebg-preview.png" alt="Logo react"></div>
+          <div class="slide"><img src="img/logo-wordpress-removebg-preview.png" alt="Logo wordpress"></div>
+
+          <!-- Duplicate the slide element -->
+          <div class="slide"><img src="img/logo-html.png" alt="Logo html"></div>
+          <div class="slide"><img src="img/logo-css.png" alt="Logo css"></div>
+          <div class="slide"><img src="img/logo-javascript.png" alt="Logo javascript"></div>
+          <div class="slide"><img src="img/logo-bootstrap-removebg-preview.png" alt="Logo boostrap"></div>
+          <div class="slide"><img src="img/logo-react-removebg-preview.png" alt="Logo react"></div>
+          <div class="slide"><img src="img/logo-wordpress-removebg-preview.png" alt="Logo wordpress"></div>
+        </div>
+      </div>
     </section>
   </main>
 
