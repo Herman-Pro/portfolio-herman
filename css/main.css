@@ -24,6 +24,7 @@
 :root {
   --black-color: #000;
   --nav-links-color: #fff;
+  --bg-light: #f8fafc;
   --hover-color: #cc0000;
   --font-main: "Poppins", sans-serif;
   --fs-h1: clamp(1.8rem, 2vw + 1rem, 3rem);
@@ -51,7 +52,10 @@ a {
 }
 
 .navbar {
-  background-color: var(--black-color);
+  position: fixed;
+  width: 98%;
+  z-index: 9999;
+  background-color: #000000e2;
   padding: 1rem 1.3rem;
   display: flex;
   justify-content: space-between;
@@ -136,7 +140,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-content: center;
-  padding: 4.5rem 1.6rem;
+  padding: 8.5rem 1.6rem;
 }
 
 /* Banner image */
@@ -144,7 +148,7 @@ a {
   width: 35%;
   object-fit: cover;
   border-radius: 1.3rem;
-  box-shadow: 1px 1px 1px 1px 1px rgba(0, 0, 0, 0.65);
+  box-shadow: 0 10px 15px -3px rgba(239, 239, 239, 0.477);
 }
 
 .profil-infos {
@@ -189,7 +193,7 @@ a {
 }
 
 #about {
-  background-color: var(--nav-links-color);
+  background-color: var(--bg-light);
   padding: 3rem 1.6rem;
 }
 
@@ -322,12 +326,12 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
-  gap: 1.5rem;
+  gap: 1.7rem;
   margin-top: 5rem;
 }
 
 .project-container div {
-  background-color: var(--nav-links-color);
+  background-color: var(--bg-light);
   border-radius: 20px;
   padding: 1.3rem 1.7rem;
 }
@@ -337,21 +341,19 @@ a {
   object-fit: cover;
 }
 
-.project-container div h2{
+.project-container div h2 {
   font-size: 2.3rem;
   color: var(--hover-color);
   margin-bottom: 0;
 }
 
-.project-container div p{
+.project-container div p {
   font-size: 1.1rem;
+  line-height: 1.2em;
   text-align: justify;
 }
 
-.project-container div a{
-}
-
-.btn-second-style{
+.btn-second-style {
   font-size: 1.3rem;
   text-transform: uppercase;
   background-color: var(--black-color);
@@ -362,9 +364,85 @@ a {
   transition: all 0.4s ease-in-out;
 }
 
-/* .btn-second-style:hover{
-  
-} */
+.btn-second-style:hover {
+  background-color: var(--hover-color);
+  border: solid 2px var(--hover-color);
+}
+
+#services {
+  padding: 3rem 1.6rem;
+  background-color: var(--bg-light);
+}
+
+#services h1 {
+  text-transform: uppercase;
+  color: var(--black-color);
+  font-size: 3.3rem;
+  line-height: 1.25em;
+  text-align: center;
+}
+
+#services h1 span {
+  color: var(--hover-color);
+}
+
+.services-container {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  gap: 3rem;
+}
+
+.services-presentation {
+  width: 83%;
+  align-content: center;
+}
+
+.services-presentation h2 {
+  font-size: 2.3rem;
+  color: var(--hover-color);
+  margin-bottom: 0;
+}
+
+.services-presentation p {
+  font-size: 1.1rem;
+  line-height: 1.2em;
+  /* text-align: justify; */
+}
+
+.services-details {
+  align-content: center;
+  width: 95%;
+}
+
+.services-details div {
+  padding: 1rem 1.5rem;
+  background-color: var(--nav-links-color);
+  border-radius: 18px;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: solid 6px var(--hover-color);
+  border-top: solid 1px rgba(237, 237, 237, 0.708);
+  border-bottom: solid 1px rgba(237, 237, 237, 0.66);
+  box-shadow: 2px 2px 2px 2px rgba(222, 222, 222, 0.482);
+  transition: all 0.6s ease-in-out;
+}
+
+.services-details div:hover {
+  box-shadow: 0 10px 15px -3px rgba(206, 206, 206, 0.65),
+    0 10px 15px -3px rgba(206, 206, 206, 0.65);
+}
+
+.services-details div h3 {
+  font-size: 2.1rem;
+  line-height: 1.2em;
+  margin: 0;
+}
+
+.services-details div p {
+  font-size: 1.1rem;
+  line-height: 1.2em;
+}
 
 /* =======================================
     Petits téléphones (0 - 480px)
