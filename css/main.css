@@ -444,6 +444,51 @@ a {
   line-height: 1.2em;
 }
 
+.services-details div a {
+  font-size: 1.3rem;
+  color: var(--hover-color);
+  transition: all 0.4s ease-in-out;
+}
+
+#contact {
+  padding: 3rem 1.6rem;
+}
+
+#contact h1{
+  text-transform: uppercase;
+  color: var(--nav-links-color);
+  font-size: 3.3rem;
+  line-height: 1.25em;
+  text-align: center;
+}
+
+#contact h1 span{
+  color: var(--hover-color);
+}
+
+.contact-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  gap: 1.5rem;
+}
+
+.contact-infos{
+  padding: 1rem;
+}
+
+.contact-infos h2{
+  color: var(--nav-links-color);
+  font-size: 2.3rem;
+  margin: 0;
+}
+
+.contact-infos p{
+  color: var(--nav-links-color);
+  font-size: 1.1rem;
+  line-height: 1.2em;
+}
+
 /* =======================================
     Petits téléphones (0 - 480px)
    ======================================= */
