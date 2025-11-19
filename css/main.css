@@ -171,11 +171,10 @@ a {
 /* Banner Description */
 .profil-infos p {
   font-size: 1.4rem;
-  text-align: justify;
   font-weight: 400;
   line-height: 1.3em;
   color: var(--nav-links-color);
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 
 .btn-first-style {
@@ -241,9 +240,8 @@ a {
 .experiences-container {
   display: grid;
   width: 90%;
-  grid-template-rows: 1fr;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1.2rem;
+  gap: 1.5rem;
   margin-top: 3.5rem;
 }
 
@@ -256,7 +254,7 @@ a {
 }
 
 .item:hover {
-  /* transform: scale(1); */
+  transform: scale(1.1);
 }
 
 .item h3 {
@@ -280,7 +278,7 @@ a {
 
 .slider-container {
   display: flex;
-  width: calc(200px * 10); /* largeur = nombre total d’images × largeur image */
+  width: calc(15rem * 9); /* largeur = nombre total d’images × largeur image */
   animation: scroll 20s linear infinite;
 }
 
@@ -288,9 +286,11 @@ a {
   width: 12.5%;
   height: 30vh;
   flex-shrink: 0;
+  text-align: center;
+  align-content: center;
 }
 
-.slide i{
+.slide i {
   font-size: 7rem;
   line-height: 1rem;
   margin: auto;
@@ -299,34 +299,34 @@ a {
   border-radius: 10px;
 }
 
-.html{
+.html {
   color: #fff;
   background-color: #dd4b25;
 }
 
-.css{
+.css {
   color: #fff;
   background-color: #1d7abd;
 }
 
-.js{
+.js {
   color: #000;
   background-color: #f3e224;
 }
 
-.bootstrap{
+.bootstrap {
   color: #7434f8;
 }
 
-.react{
+.react {
   color: #08d9ff;
 }
 
-.wordpress{
+.wordpress {
   color: #28799e;
 }
 
-.github{
+.github {
   color: #2b3034;
 }
 
@@ -362,7 +362,7 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
-  gap: 1.7rem;
+  gap: 2.3rem;
   margin-top: 5rem;
 }
 
@@ -370,10 +370,17 @@ a {
   background-color: var(--bg-light);
   border-radius: 20px;
   padding: 1.3rem 1.7rem;
+  box-shadow: 0px 0px 12px 3px rgba(222, 222, 222, 0.578);
+}
+
+.project-container div:hover {
+  box-shadow: 0px 0px 12px 3px rgba(222, 222, 222, 0.578),
+    0px 10px 15px 3px rgba(222, 222, 222, 0.578);
 }
 
 .project-container div img {
   width: 100%;
+  border-radius: 20px;
   object-fit: cover;
 }
 
@@ -633,7 +640,7 @@ textarea::placeholder {
   color: var(--hover-color);
 }
 
-input:hover::placeholder ,
+input:hover::placeholder,
 textarea:hover::placeholder {
   color: var(--hover-color);
 }
@@ -651,7 +658,7 @@ textarea:hover::placeholder {
   width: 100%;
 }
 
-.form-contact form button{
+.form-contact form button {
   margin: 1rem auto;
   text-transform: uppercase;
   background-color: var(--hover-color);
@@ -666,18 +673,18 @@ textarea:hover::placeholder {
   border-color: var(--nav-links-color);
 }
 
-footer{
+footer {
   background-color: var(--black-color);
   padding: 2rem 1.6rem 1rem;
 }
 
-.footer-container{
+.footer-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.footer-contact h6{
+.footer-contact h6 {
   color: var(--hover-color);
   font-size: 0.8rem;
   margin: 0;
@@ -701,7 +708,7 @@ footer{
   color: var(--hover-color);
 }
 
-.footer-social a i{
+.footer-social a i {
   font-size: 1.1rem;
   color: var(--hover-color);
   padding: 0.3rem 0.35rem 0.1rem 0.35rem;
@@ -709,7 +716,7 @@ footer{
   transition: all 0.3s ease-in;
 }
 
-.footer-social a i:hover{
+.footer-social a i:hover {
   color: var(--nav-links-color);
 }
 
@@ -719,7 +726,7 @@ footer{
   align-items: center;
 }
 
-.copyright p{
+.copyright p {
   color: var(--hover-color);
   font-size: 0.6rem;
 }
@@ -792,7 +799,7 @@ footer{
 
   /* LOGO */
   .logo {
-    font-size: 4.3rem;
+    font-size: calc(2vw + 2rem);
   }
 
   .nav-links {
@@ -800,7 +807,7 @@ footer{
   }
 
   .nav-links li a {
-    font-size: 1.7rem;
+    font-size: calc(1vw + 0.7rem);
   }
 
   .profil-infos {
@@ -808,21 +815,26 @@ footer{
   }
 
   #banner {
-    padding: 4rem 3rem;
+    padding: 15rem 3rem 10rem;
   }
 
   .profil-infos h1 {
-    font-size: 6.5rem;
-    line-height: 6.4rem;
+    font-size: calc(2vw + 5rem);
+    line-height: calc(1vh + 7.2rem);
   }
 
   .profil-infos p {
-    font-size: 2.7rem;
+    font-size: calc(1vw + 1rem);
     line-height: 1.4em;
   }
 
+  .profil-infos div .btn-first-style {
+    margin-right: 1.9rem;
+  }
+
   .btn-first-style {
-    font-size: 1.7rem;
+    padding: 0.8rem 2.2rem;
+    font-size: calc(1vw + 1rem);
     border-radius: 7rem;
   }
 
@@ -831,20 +843,97 @@ footer{
   }
 
   #about h1 {
-    font-size: 6.5rem;
-    line-height: 6.4rem;
+    font-size: calc(2vw + 4.5rem);
+    line-height: calc(1vh + 7.2rem);
   }
 
   .about-infos h2 {
-    font-size: 4.5rem;
+    font-size: calc(2vw + 2.8rem);
   }
 
   .about-infos p {
-    font-size: 2.1rem;
+    font-size: calc(1vw + 0.5rem);
     line-height: 1.4em;
   }
 
   .item h3 {
-    font-size: 3.5rem;
+    font-size: calc(1vw + 1.5rem);
   }
+
+  .slide {
+    width: 25%;
+  }
+
+  .slide i {
+    font-size: calc(4vw + 11.5rem);
+  }
+
+  #project {
+    padding: 4rem 3rem;
+  }
+
+  #project h1 {
+    font-size: calc(2vw + 4.5rem);
+    line-height: calc(1vh + 7.2rem);
+  }
+
+  .project-container {
+    gap: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  .project-container div {
+    padding: 1.5rem 2rem;
+  }
+
+  .project-container div h2 {
+    font-size: calc(2vw + 2.8rem);
+  }
+
+  .project-container div p {
+    font-size: calc(1vw + 0.5rem);
+    line-height: 1.4em;
+  }
+
+  .btn-second-style {
+    padding: 0.8rem 2.2rem;
+    font-size: calc(1vw + 1rem);
+    border-radius: 7rem;
+  }
+
+  #services {
+    padding: 4rem 3rem;
+  }
+
+  #services h1 {
+    font-size: calc(2vw + 4.5rem);
+    line-height: calc(1vh + 7.2rem);
+  }
+
+  .services-presentation h2 {
+    font-size: calc(2vw + 2.8rem);
+  }
+
+  .services-presentation p {
+    font-size: calc(1vw + 0.5rem);
+    line-height: 1.4em;
+  }
+
+  .services-details div {
+    padding: 1.5rem 2rem;
+  }
+
+  .services-details div h3 {
+    font-size: calc(1vw + 1.5rem);
+  }
+
+  .services-details div p {
+    font-size: calc(1vw + 0.5rem);
+    line-height: 1.4em;
+  }
+
+  .services-details div a {
+    font-size: calc(1vw + 1rem);
+  }
+
 }
