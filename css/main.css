@@ -613,6 +613,7 @@ textarea {
   border-top: none;
   border-right: none;
   border-left: none;
+  border-width: 2px;
   border-color: var(--nav-links-color);
   padding: 1.2rem 0.5rem;
   font-size: 1.1rem;
@@ -934,6 +935,93 @@ footer {
 
   .services-details div a {
     font-size: calc(1vw + 1rem);
+  }
+
+  #contact{
+    padding: 4rem 3rem;
+  }
+
+  #contact h1 {
+    font-size: calc(2vw + 4.5rem);
+    line-height: calc(1vh + 7.2rem);
+  }
+
+  .contact-infos h2 {
+    font-size: calc(2vw + 2.8rem);
+  }
+
+  .contact-infos p{
+    font-size: calc(1vw + 0.5rem);
+    line-height: 1.4em;
+    margin-bottom: 4rem;
+  }
+
+  .info-detail i{
+    font-size: calc(1vw + 1rem);
+    padding: 1.4rem 1.5rem 0.8rem 1.5rem;
+    margin-right: 2rem;
+  }
+
+  .info-detail div h6{
+    font-size: calc(1vw + 0.1rem);
+  }
+
+  .info-detail div p {
+    font-size: calc(1vw + 0.4rem);
+  }
+
+  .social-icon{
+    margin-top: 4rem;
+  }
+
+  .social-icon a i {
+    font-size: calc(2vw + 1rem);
+    padding: 1.4rem 1.5rem 0.8rem 1.5rem;
+  }
+
+  .form-contact p {
+    margin-top: 5rem;
+    font-size: calc(1vw + 0.5rem);
+    line-height: 1.4em;
+    margin-bottom: 4rem;
+  }
+
+  input, textarea {
+    font-size: calc(1vw + 0.7rem);
+    padding: 1.4rem 0.7rem;
+    margin-bottom: 4rem;
+    border-width: 3px;
+  }
+
+  .form-contact form button {
+    padding: 0.8rem 2.2rem;
+    font-size: calc(1vw + 1rem);
+    border-radius: 20px;
+    border-width: 4px;
+  }
+
+  footer{
+     padding: 4rem 3rem;
+  }
+
+  .footer-contact h6 {
+    font-size: calc(0.8vw + 0.4rem);
+  }
+
+  .footer-contact p {
+    font-size: calc(0.8vw + 0.1rem);
+  }
+
+  .fast-link a {
+    font-size: calc(1vw + 0.4rem);
+  }
+
+  .footer-social a i {
+    font-size: calc(1vw + 0.4rem);
+  }
+
+  .copyright p {
+    font-size: calc(0.5vw + 0.1rem);
   }
 
 }
