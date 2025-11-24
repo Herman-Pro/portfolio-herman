@@ -51,6 +51,16 @@ a {
   text-decoration: none;
 }
 
+p{
+  text-justify: inter-word;
+  hyphens: auto;
+  word-spacing: -0.05em;
+}
+
+/* =======================================
+    Grands écrans (1280px - 1600px)
+   ======================================= */
+
 .navbar {
   position: fixed;
   width: 98%;
@@ -240,7 +250,7 @@ a {
 .experiences-container {
   display: grid;
   width: 90%;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 1.5rem;
   margin-top: 3.5rem;
 }
@@ -360,13 +370,15 @@ a {
 
 .project-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  place-content: center;
   grid-template-rows: 1fr;
   gap: 2.3rem;
   margin-top: 5rem;
 }
 
 .project-container div {
+  width: 82%;
   background-color: var(--bg-light);
   border-radius: 20px;
   padding: 1.3rem 1.7rem;
@@ -754,41 +766,178 @@ footer {
     Laptops / écrans moyens (993px - 1280px)
    ======================================= */
 @media (max-width: 1280px) {
-  .nav-links li a {
-    font-size: 1rem;
+  .navbar {
+    padding: 0.8rem 0.5rem;
+    width: 99%;
   }
+
+  .logo {
+    font-size: calc(1vw + 1.5rem);
+  }
+
+  .nav-links {
+    gap: 0.4rem;
+  }
+
+  .nav-links li a {
+    font-size: calc(0.5vw + 0.7rem);
+  }
+
+  .profil-infos {
+    width: 55%;
+  }
+
   .profil-infos h1 {
-    font-size: 3rem;
-    line-height: 3.3rem;
+    font-size: calc(2vw + 2.7rem);
+    line-height: calc(1vh + 3.4rem);
+    margin-bottom: 2rem;
   }
 
   .profil-infos p {
-    font-size: 1rem;
+    font-size: calc(0.5vw + 1rem);
     line-height: 1.4em;
+    margin-bottom: 3rem;
+  }
+
+  .profil-infos div .btn-first-style {
+    margin-right: 1rem;
   }
 
   .btn-first-style {
-    font-size: 1rem;
+    font-size: calc(0.5vw + 0.7rem);
   }
 
-  #about h1 {
-    font-size: 3rem;
+  .profil-infos h1 {
+    font-size: calc(2vw + 2.5rem);
+    line-height: calc(1vh + 3.2rem);
   }
 
   .about-infos h2 {
-    font-size: 2.1rem;
+    font-size: calc(2vw + 1.2rem);
   }
 
   .about-infos p {
-    font-size: 0.9rem;
+    font-size: calc(0.5vw + 0.8rem);
+    line-height: 1.4em;
   }
-}
 
-/* =======================================
-    Grands écrans (1280px - 1600px)
-   ======================================= */
-/* @media (max-width: 1600px) {
-} */
+  .experiences-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .item h3 {
+    font-size: calc(1vw + 1rem);
+  }
+
+  .slide {
+    width: 13%;
+  }
+
+  .slide i {
+    font-size: calc(4vw + 5.2rem);
+  }
+
+  #project h1 {
+    font-size: calc(2vw + 2.5rem);
+    line-height: calc(1vh + 3.2rem);
+  }
+
+  .project-container {
+    margin-bottom: 5rem;
+  }
+
+  .project-container div {
+    padding: 2rem 1.5rem;
+  }
+
+  .project-container div h2 {
+    font-size: calc(2vw + 1.2rem);
+  }
+
+  .project-container div p {
+    font-size: calc(0.5vw + 0.8rem);
+    line-height: 1.4em;
+  }
+
+  .btn-second-style {
+    font-size: calc(0.5vw + 0.7rem);
+    margin-top: 5rem;
+  }
+
+  #services h1 {
+    font-size: calc(2vw + 2.5rem);
+    line-height: calc(1vh + 3.2rem);
+  }
+
+  .services-presentation h2 {
+    font-size: calc(2vw + 1.2rem);
+  }
+
+  .services-presentation p {
+    font-size: calc(0.5vw + 0.8rem);
+    line-height: 1.4em;
+  }
+
+  .services-details div h3 {
+    font-size: calc(1vw + 1.1rem);
+  }
+
+  .services-details div p {
+    font-size: calc(0.5vw + 0.8rem);
+    line-height: 1.4em;
+  }
+
+  .services-details div a {
+    font-size: calc(0.5vw + 0.7rem);
+  }
+
+  #contact h1 {
+    font-size: calc(2vw + 2.5rem);
+    line-height: calc(1vh + 3.2rem);
+  }
+
+  .contact-infos h2 {
+    font-size: calc(2vw + 1.2rem);
+    line-height: 1.2em;
+  }
+
+  .contact-infos p {
+    font-size: calc(1vw + 0.5rem);
+    line-height: 1.4em;
+    margin-bottom: 2rem;
+  }
+
+  .info-detail i {
+    font-size: calc(1vw + 1rem);
+    padding: 1.4rem 1.5rem 0.8rem 1.5rem;
+    margin-right: 2rem;
+  }
+
+  .info-detail div h6 {
+    font-size: calc(1vw + 0.1rem);
+  }
+
+  .info-detail div p {
+    font-size: calc(1vw + 0.4rem);
+  }
+
+  .social-icon {
+    margin-top: 4rem;
+  }
+
+  .social-icon a i {
+    font-size: calc(1vw + 1rem);
+    padding: 1.1rem 1.2rem 0.5rem 1.2rem;
+  }
+
+  .form-contact p {
+    margin-top: 3rem;
+     font-size: calc(1vw + 0.5rem);
+    line-height: 1.4em;
+    margin-bottom: 2rem;
+  }
+
+}
 
 /* =======================================
    🖥️ Très grands écrans (1600px+)
@@ -937,7 +1086,7 @@ footer {
     font-size: calc(1vw + 1rem);
   }
 
-  #contact{
+  #contact {
     padding: 4rem 3rem;
   }
 
@@ -950,19 +1099,19 @@ footer {
     font-size: calc(2vw + 2.8rem);
   }
 
-  .contact-infos p{
+  .contact-infos p {
     font-size: calc(1vw + 0.5rem);
     line-height: 1.4em;
     margin-bottom: 4rem;
   }
 
-  .info-detail i{
+  .info-detail i {
     font-size: calc(1vw + 1rem);
     padding: 1.4rem 1.5rem 0.8rem 1.5rem;
     margin-right: 2rem;
   }
 
-  .info-detail div h6{
+  .info-detail div h6 {
     font-size: calc(1vw + 0.1rem);
   }
 
@@ -970,7 +1119,7 @@ footer {
     font-size: calc(1vw + 0.4rem);
   }
 
-  .social-icon{
+  .social-icon {
     margin-top: 4rem;
   }
 
@@ -986,7 +1135,8 @@ footer {
     margin-bottom: 4rem;
   }
 
-  input, textarea {
+  input,
+  textarea {
     font-size: calc(1vw + 0.7rem);
     padding: 1.4rem 0.7rem;
     margin-bottom: 4rem;
@@ -1000,8 +1150,8 @@ footer {
     border-width: 4px;
   }
 
-  footer{
-     padding: 4rem 3rem;
+  footer {
+    padding: 4rem 3rem;
   }
 
   .footer-contact h6 {
@@ -1023,5 +1173,4 @@ footer {
   .copyright p {
     font-size: calc(0.5vw + 0.1rem);
   }
-
 }
