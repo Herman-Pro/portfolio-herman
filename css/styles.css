@@ -1165,7 +1165,7 @@ footer {
     position: fixed;
     top: 0;
     right: -100vw; /* commence caché */
-    width: 33vw; /* largeur moitié d'écran */
+    width: 40vw; /* largeur moitié d'écran */
     height: 100vh;
     background-color: #000000e2;
     flex-direction: column;
@@ -1413,8 +1413,8 @@ footer {
   }
 
   .info-detail div h6 {
-        font-size: calc(1vw + 0.3rem);
-    }
+    font-size: calc(1vw + 0.3rem);
+  }
 
   .info-detail div p {
     font-size: calc(1vw + 0.4rem);
@@ -1436,12 +1436,12 @@ footer {
     justify-content: center;
   }
 
-  .footer-contact{
+  .footer-contact {
     text-align: center;
     margin-bottom: 1rem;
   }
 
-  .footer-contact h6{
+  .footer-contact h6 {
     font-size: calc(1vw + 0.4rem);
   }
 
@@ -1449,7 +1449,7 @@ footer {
     font-size: calc(1vw + 0.3rem);
   }
 
-  .fast-link{
+  .fast-link {
     margin-bottom: 1.5rem;
   }
 
@@ -1457,21 +1457,20 @@ footer {
     text-align: center;
   }
 
-  .footer-social{
+  .footer-social {
     margin-bottom: 1.2rem;
   }
 
   .copyright p {
     font-size: 0.5rem;
-}
-
+  }
 }
 
 /* =======================================
     Téléphones standards (481px - 668px)
    ======================================= */
 @media (max-width: 668px) {
-  #banner{
+  #banner {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
@@ -1486,7 +1485,7 @@ footer {
     margin-bottom: 2rem;
   }
 
-  .profil-infos{
+  .profil-infos {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1502,11 +1501,10 @@ footer {
     text-align: center;
   }
 
-  .profil-infos div{
+  .profil-infos div {
     display: block;
     margin: 0 auto;
   }
-
 
   .slide {
     width: 10%;
@@ -1516,14 +1514,13 @@ footer {
     font-size: calc(4vw + 2.5rem);
   }
 
-  .name-infos{
+  .name-infos {
     flex-direction: column;
   }
 
-
-  .fast-link{
+  .fast-link {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
     margin-bottom: 1rem;
   }
@@ -1532,10 +1529,10 @@ footer {
     text-align: center;
   }
 
-  .fast-link{
+  .fast-link {
     margin-bottom: 2rem;
   }
   .copyright p {
     font-size: 0.4rem;
-}
+  }
 }
