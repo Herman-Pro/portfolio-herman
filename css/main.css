@@ -1412,8 +1412,12 @@ footer {
     padding: 1.1rem 1.2rem 0.5rem 1.2rem;
   }
 
+  .info-detail div h6 {
+        font-size: calc(1vw + 0.3rem);
+    }
+
   .info-detail div p {
-    font-size: calc(1vw + 0.2rem);
+    font-size: calc(1vw + 0.4rem);
   }
 
   .social-icon {
@@ -1426,10 +1430,112 @@ footer {
     padding: 1.1rem 1.2rem 0.5rem 1.2rem;
     margin-right: 0.2rem;
   }
+
+  .footer-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer-contact{
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .footer-contact h6{
+    font-size: calc(1vw + 0.4rem);
+  }
+
+  .footer-contact p {
+    font-size: calc(1vw + 0.3rem);
+  }
+
+  .fast-link{
+    margin-bottom: 1.5rem;
+  }
+
+  .fast-link a {
+    text-align: center;
+  }
+
+  .footer-social{
+    margin-bottom: 1.2rem;
+  }
+
+  .copyright p {
+    font-size: 0.5rem;
+}
+
 }
 
 /* =======================================
     Téléphones standards (481px - 668px)
    ======================================= */
 @media (max-width: 668px) {
+  #banner{
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 5.5rem 1.6rem;
+  }
+
+  #banner img {
+    width: 65%;
+    border-radius: 50%;
+    box-shadow: none;
+    border: solid 6px var(--hover-color);
+    margin-bottom: 2rem;
+  }
+
+  .profil-infos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .profil-infos h1 {
+    text-align: center;
+  }
+
+  .profil-infos p {
+    text-align: center;
+  }
+
+  .profil-infos div{
+    display: block;
+    margin: 0 auto;
+  }
+
+
+  .slide {
+    width: 10%;
+  }
+
+  .slide i {
+    font-size: calc(4vw + 2.5rem);
+  }
+
+  .name-infos{
+    flex-direction: column;
+  }
+
+
+  .fast-link{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .fast-link a {
+    text-align: center;
+  }
+
+  .fast-link{
+    margin-bottom: 2rem;
+  }
+  .copyright p {
+    font-size: 0.4rem;
+}
 }
