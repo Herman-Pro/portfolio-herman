@@ -1327,7 +1327,7 @@ footer {
     font-size: calc(0.5vw + 0.5rem);
   }
 
-  .about-infos h1 {
+  #about h1 {
     font-size: calc(2vw + 1.7rem);
     line-height: calc(1vh + 2.2rem);
   }
