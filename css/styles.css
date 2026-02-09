@@ -45,6 +45,7 @@ body {
   box-sizing: border-box;
   font-family: var(--font-main);
   background-color: #111;
+
 }
 
 a {
@@ -55,6 +56,11 @@ p {
   text-justify: inter-word;
   hyphens: auto;
   word-spacing: -0.05em;
+}
+
+.container {
+  padding-right: 5%;
+  padding-left: 5%;
 }
 
 /* =======================================
@@ -150,12 +156,14 @@ p {
   display: flex;
   justify-content: space-between;
   align-content: center;
-  padding: 8.5rem 1.6rem;
+  padding-top: 8.5rem;
+  padding-bottom: 8.5rem;
 }
 
 /* Banner image */
 #banner img {
   width: 35%;
+  height: 75%;
   object-fit: cover;
   border-radius: 1.3rem;
   box-shadow: 0 10px 15px -3px rgba(239, 239, 239, 0.477);
@@ -213,7 +221,8 @@ p {
 
 #about {
   background-color: var(--bg-light);
-  padding: 3rem 1.6rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 #about h1 {
@@ -324,7 +333,8 @@ p {
 
 .slider-container {
   display: flex;
-  width: calc(15rem * 9); /* largeur = nombre total d’images × largeur image */
+  width: calc(15rem * 9);
+  /* largeur = nombre total d’images × largeur image */
   animation: scroll 20s linear infinite;
 }
 
@@ -381,6 +391,7 @@ p {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-50%);
   }
@@ -389,7 +400,8 @@ p {
 /* Project section */
 
 #project {
-  padding: 3rem 1.6rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 #project h1 {
@@ -461,7 +473,8 @@ p {
   color: var(--nav-links-color);
   border-radius: 1.8rem;
   border: solid 2px var(--black-color);
-  margin-top: auto; /* pousse le bouton au bas de la carte */
+  margin-top: auto;
+  /* pousse le bouton au bas de la carte */
   display: inline-block;
   align-self: flex-start;
   transition: all 0.4s ease-in-out;
@@ -473,7 +486,8 @@ p {
 }
 
 #services {
-  padding: 3rem 1.6rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   background-color: var(--bg-light);
 }
 
@@ -553,7 +567,8 @@ p {
 }
 
 #contact {
-  padding: 3rem 1.6rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 #contact h1 {
@@ -817,7 +832,8 @@ footer {
   }
 
   #banner {
-    padding: 15rem 3rem 10rem;
+    padding-top: 15rem;
+    padding-bottom: 10rem;
   }
 
   .profil-infos h1 {
@@ -846,7 +862,8 @@ footer {
   }
 
   #about {
-    padding: 4rem 3rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   #about h1 {
@@ -887,7 +904,8 @@ footer {
   }
 
   #project {
-    padding: 4rem 3rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   #project h1 {
@@ -926,7 +944,8 @@ footer {
   }
 
   #services {
-    padding: 4rem 3rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   #services h1 {
@@ -961,7 +980,8 @@ footer {
   }
 
   #contact {
-    padding: 4rem 3rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   #contact h1 {
@@ -1249,8 +1269,10 @@ footer {
   .nav-links {
     position: fixed;
     top: 0;
-    right: -100vw; /* commence caché */
-    width: 40vw; /* largeur moitié d'écran */
+    right: -100vw;
+    /* commence caché */
+    width: 40vw;
+    /* largeur moitié d'écran */
     height: 100vh;
     background-color: #000000e2;
     flex-direction: column;
@@ -1319,6 +1341,7 @@ footer {
     line-height: 1.4em;
     margin-bottom: 3rem;
   }
+
   .profil-infos div .btn-first-style {
     margin-right: 0.5rem;
   }
@@ -1395,6 +1418,7 @@ footer {
   .project-container div h2 {
     font-size: calc(2vw + 0.9rem);
   }
+
   .project-container div img {
     display: block;
     margin: 0 auto;
@@ -1575,7 +1599,7 @@ footer {
 
   #banner img {
     width: 65%;
-    border-radius: 50%;
+    border-radius: 30% 0;
     box-shadow: none;
     border: solid 6px var(--hover-color);
     margin-bottom: 2rem;
@@ -1642,5 +1666,5 @@ footer {
   .copyright p {
     font-size: 0.4rem;
   }
-  
+
 }
