@@ -1,0 +1,66 @@
+/* ==========================
+   Reset de base
+   ========================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==========================
+   Document
+   ========================== */
+
+html {
+  font-size: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================
+   Médias
+   ========================== */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* ==========================
+   Formulaires
+   ========================== */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* ==========================
+   Liens
+   ========================== */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ==========================
+   Listes
+   ========================== */
+
+ul,
+ol {
+  list-style: none;
+}

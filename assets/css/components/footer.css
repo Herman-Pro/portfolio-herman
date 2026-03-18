@@ -1,0 +1,333 @@
+/* ============================================================
+   FOOTER
+   Fichier : assets/css/components/footer.css
+   ============================================================ */
+
+.footer {
+  background-color: var(--color-bg-dark, #0f172a);
+  color: var(--color-text-inverse, #ffffff);
+  padding-block: var(--space-16);
+}
+
+/*
+  background-color: #0f172a → bleu nuit très sombre.
+  Pas noir pur (#000) — trop brutal.
+  Ce bleu nuit est dans la famille chromatique du primary
+  sans être aussi saturé. Cohérence avec l'identité KODIA.
+
+  color: white → texte inverse sur fond sombre.
+  On définit la couleur ici une seule fois — les enfants héritent.
+  On ne remet pas color sur chaque élément enfant.
+*/
+
+
+/* ----------------------------------------------------------
+   TOP — Grille 3 colonnes
+---------------------------------------------------------- */
+
+.footer__top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-10);
+  padding-bottom: var(--space-10);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/*
+  1 colonne mobile → empilement naturel.
+
+  border-bottom → ligne séparatrice entre le contenu
+  et le copyright en bas.
+  rgba(255,255,255, 0.1) → blanc très transparent.
+  Une bordure blanche pleine serait trop agressive sur fond sombre.
+  0.1 d'opacité = subtil et élégant.
+*/
+
+@media (min-width: 48rem) {
+  .footer__top {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  /*
+    3 colonnes sur desktop :
+    2fr pour la brand → elle prend plus de place, elle a plus de contenu.
+    1fr + 1fr pour nav et contact → colonnes égales.
+  */
+}
+
+
+/* ----------------------------------------------------------
+   BRAND — Logo + tagline
+---------------------------------------------------------- */
+
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.footer__logo-image {
+  width: 7.5rem;
+}
+
+@media (min-width: 48rem) {
+  .footer__logo-image {
+    width: 9rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .footer__logo-image {
+      width: 11.3rem;
+    }
+}
+
+/*
+  filter: brightness(0) invert(1) → rend le logo blanc.
+  brightness(0) = tout en noir d'abord.
+  invert(1) = inverse → tout devient blanc.
+
+  Pourquoi ce filtre et pas une version blanche du logo ?
+  → On n'a pas besoin d'un 2ème fichier image.
+  Une seule image, un filtre CSS = logo blanc automatique.
+  Si le logo change, on ne gère qu'un seul fichier.
+*/
+
+.footer__tagline {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+  max-width: 20rem;
+}
+
+/*
+  rgba(255,255,255, 0.6) → blanc à 60% d'opacité.
+  Moins important que les titres (blanc plein).
+  Crée une hiérarchie visuelle même sur fond sombre.
+
+  max-width: 20rem → on évite des lignes trop longues
+  dans la colonne brand qui est plus large (2fr).
+*/
+
+
+/* ----------------------------------------------------------
+   NAV & CONTACT — Colonnes de liens
+---------------------------------------------------------- */
+
+.footer__nav,
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.footer__nav-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/*
+  text-transform: uppercase + letter-spacing → style classique
+  pour les titres de colonnes de footer.
+  Crée une distinction claire entre le titre et les liens.
+  letter-spacing: 0.08em → légèrement espacé, plus lisible en uppercase.
+*/
+
+.footer__nav-list,
+.footer__contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.footer__nav-link {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color var(--transition-base);
+}
+
+.footer__nav-link:hover {
+  color: var(--color-white);
+}
+
+/*
+  État par défaut → blanc 60% (atténué).
+  Hover → blanc plein.
+  Transition douce — cohérent avec le reste du kit.
+*/
+
+.footer__contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.footer__contact-icon {
+  display: flex;
+  font-size: 0.875rem;
+  color: var(--color-primary-500);
+  flex-shrink: 0;
+}
+
+/*
+  Icône en primary-500 → seule touche de couleur dans le footer.
+  Crée un point d'attention visuel sur les infos de contact.
+  Cohérent avec le reste du kit où primary = action/interaction.
+*/
+
+
+/* ----------------------------------------------------------
+   BOTTOM — Copyright
+---------------------------------------------------------- */
+
+.footer__bottom {
+  padding-top: var(--space-8);
+  text-align: center;
+}
+
+.footer__copyright {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/*
+  0.4 d'opacité → copyright très discret.
+  C'est une information légale, pas du contenu principal.
+  Hiérarchie visuelle : brand > liens > contact > copyright.
+*/
+
+/* ============================================================
+   PORTFOLIO FOOTER
+   ============================================================ */
+
+.portfolio-footer {
+  background-color: var(--color-bg-dark);
+  padding-block: var(--space-12);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/*
+  border-top → ligne séparatrice discrète entre
+  la section contact et le footer.
+  Les deux sont sur fond sombre — sans cette ligne
+  ils se fondent en un seul bloc sans limite claire.
+  rgba blanc 10% → subtil, cohérent avec le reste.
+*/
+
+.portfolio-footer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+/*
+  flex-direction: column + align-items: center → tout centré.
+  gap: --space-8 → respiration entre les 3 blocs.
+*/
+
+
+/* ----------------------------------------------------------
+   COORDONNÉES
+---------------------------------------------------------- */
+
+.portfolio-footer__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.portfolio-footer__contact-link {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color var(--transition-base);
+}
+
+.portfolio-footer__contact-link:hover {
+  color: var(--color-primary-500);
+}
+
+
+/* ----------------------------------------------------------
+   NAVIGATION
+---------------------------------------------------------- */
+
+.portfolio-footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4) var(--space-8);
+}
+
+/*
+  flex-wrap: wrap → les liens passent à la ligne
+  si l'écran est trop petit.
+  gap avec deux valeurs → espace vertical (--space-4)
+  et horizontal (--space-8) différents.
+*/
+
+.portfolio-footer__nav-link {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color var(--transition-base);
+}
+
+.portfolio-footer__nav-link:hover {
+  color: var(--color-white);
+}
+
+
+/* ----------------------------------------------------------
+   RÉSEAUX SOCIAUX
+---------------------------------------------------------- */
+
+.portfolio-footer__socials {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.portfolio-footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-full);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  transition: background-color var(--transition-base),
+    color var(--transition-base);
+}
+
+.portfolio-footer__social-link:hover {
+  background-color: var(--color-primary-500);
+  color: var(--color-white);
+}
+
+/*
+  Au hover → fond rouge + icône blanche.
+  Cohérent avec l'identité rouge du portfolio.
+  Pastille ronde — classique pour les icônes sociales.
+*/
+
+
+/* ----------------------------------------------------------
+   COPYRIGHT
+---------------------------------------------------------- */
+
+.portfolio-footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: var(--space-6);
+  text-align: center;
+}
+
+.portfolio-footer__copyright {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+}

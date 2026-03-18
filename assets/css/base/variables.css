@@ -1,0 +1,86 @@
+:root {
+  /* === TYPOGRAPHIE === */
+  --font-base: system-ui, sans-serif;
+
+  /* === COULEURS NEUTRES === */
+  --color-bg-dark: #0d0d0d;
+  --color-bg-dark-transparent: #0d0d0de4;
+  /* fond sombre hero + sections dark */
+  --color-bg-dark-2: #1a1a1a;
+  /* fond cards sur fond sombre */
+  --color-white: #ffffff;
+  --color-gray-900: #1e1e1e;
+  --color-gray-700: #374151;
+  --color-gray-400: #9ca3af;
+  --color-gray-100: #f5f7fb;
+  --color-gray-50: #f9fafb;
+
+  /* bordures sur fond sombre */
+
+  /* === COULEURS PRINCIPALES === */
+  --color-primary-500: #e11d2a;
+  /* rouge portfolio */
+  --color-primary-600: #c0151f;
+  /* rouge foncé hover */
+  --color-primary-50: #fff1f2;
+  /* rouge très dilué — fond icônes */
+
+  /* === BORDURES === */
+  --color-border: #e5e7eb;
+  /* ← AJOUT : bordures légères */
+  --color-border: #e5e7eb;
+  --color-border-dark: rgba(255, 255, 255, 0.1);
+
+  /* === ESPACEMENTS ===
+     Échelle ×4 basée sur 4px
+     Pourquoi cette échelle ? Standard industrie (Figma 8pt grid).
+     Chaque valeur = multiple de 4px → harmonie visuelle automatique.
+  */
+  --space-1: 0.25rem;
+  /*  4px */
+  --space-2: 0.5rem;
+  /*  8px */
+  --space-3: 0.75rem;
+  /* 12px */
+  --space-4: 1rem;
+  /* 16px */
+  --space-6: 1.5rem;
+  /* 24px */
+  --space-8: 2rem;
+  /* 32px */
+  --space-10: 2.5rem;
+  /* 40px */
+  --space-12: 3rem;
+  /* 48px */
+  --space-16: 4rem;
+  /* 64px */
+  --space-20: 5rem;
+  /* 80px */
+
+  /* On garde tes alias sémantiques — utiles pour la lecture rapide */
+  --space-xs: var(--space-2);
+  /* 8px  */
+  --space-sm: var(--space-3);
+  /* 12px */
+  --space-md: var(--space-6);
+  /* 24px */
+  --space-lg: var(--space-12);
+  /* 48px */
+
+  /* === UI === */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  /* ← AJOUT : pour les cards */
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.08);
+
+  /* === TRANSITIONS === */
+  --transition-base: 250ms ease;
+
+
+  /* === Z-INDEX === */
+  --z-sticky: 200;
+  --z-dropdown: 100;
+}

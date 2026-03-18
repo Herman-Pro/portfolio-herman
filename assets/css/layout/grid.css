@@ -1,0 +1,145 @@
+/* ============================================================
+   GRID — Layouts réutilisables
+   Fichier : assets/css/layout/grid.css
+
+   Ce fichier répond à UNE seule question :
+   "Comment les blocs sont disposés les uns par rapport aux autres ?"
+
+   Il ne connaît pas les couleurs, les typos, les composants.
+   Il pose juste la structure.
+   ============================================================ */
+
+/* ----------------------------------------------------------
+     TWO-COL — Layout 2 colonnes
+     
+     Utilisation :
+     <div class="two-col">
+       <div class="two-col__left">   ← contenu principal (texte)
+       <div class="two-col__right">  ← contenu secondaire (image)
+  
+     Exemples de sections qui l'utilisent :
+     → Hero (titre + image)
+     → À propos (texte + photo)
+     → Contact (formulaire + infos)
+  ---------------------------------------------------------- */
+
+.two-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+.two-col__left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.two-col__right {
+  flex-shrink: 0;
+}
+
+/* ----------------------------------------------------------
+   THREE-COL — Grille 3 colonnes
+   
+   Utilisation :
+   <ul class="three-col" role="list">
+     <li>...</li>
+     <li>...</li>
+     <li>...</li>
+
+   Exemples de sections qui l'utilisent :
+   → Services (3 cards)
+   → Avantages (3 arguments)
+   → Équipe (3 membres)
+---------------------------------------------------------- */
+
+.three-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+
+@media (min-width: 48rem) {
+
+  .two-col {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .two-col__left {
+    flex: 1 1 55%;
+  }
+
+  .two-col__right {
+    flex: 1 1 40%;
+  }
+
+  .three-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  
+
+  /* ----------------------------------------------------------
+   MODIFICATEUR — Colonnes inversées
+
+   Utilisation : <div class="two-col two-col--reverse">
+   → right à gauche, left à droite
+
+   Utile pour alterner image/texte sur plusieurs sections
+   sans toucher au HTML.
+
+   Pourquoi ne pas inverser dans le HTML directement ?
+   → L'ordre HTML impacte les lecteurs d'écran et la navigation
+   au clavier. On inverse VISUELLEMENT via CSS,
+   l'ordre logique du contenu reste intact.
+  ---------------------------------------------------------- */
+  .two-col--reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+/* Entre tablette ET desktop uniquement */
+@media (min-width: 48rem) and (max-width: 63.99rem) {
+  .three-col> :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    width: calc(50% - var(--space-3));
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 64rem) {
+  .three-col {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ----------------------------------------------------------
+   TWO-COL-GRID — Grille 2 colonnes égales
+
+   Usage :
+   <ul class="two-col-grid" role="list">
+     <li>...</li>
+
+   Différence avec .two-col :
+   → .two-col      : layout asymétrique (55% / 40%), texte + image
+   → .two-col-grid : 2 colonnes ÉGALES pour cards identiques
+
+   Utilisable dans : services, projets, équipe par paires...
+---------------------------------------------------------- */
+
+.two-col-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+/* 1 colonne sur mobile — empilement naturel */
+
+@media (min-width: 48rem) {
+  .two-col-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

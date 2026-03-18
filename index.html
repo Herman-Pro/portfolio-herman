@@ -4,390 +4,626 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio personnel de Herman Audrey TOSSAVI - Développeur Web">
+  <title>Herman Tossavi — Développeur Web Front-End</title>
 
-  <title>Portfolio - Herman Audrey TOSSAVI</title>
+  <meta name="description"
+    content="Portfolio de Herman Audrey Tossavi, développeur web front-end basé à Cotonou, Bénin. Spécialisé en HTML, CSS, JavaScript.">
+  <meta name="author" content="Herman Audrey Tossavi">
+  <meta property="og:title" content="Herman Tossavi — Développeur Web">
+  <meta property="og:description"
+    content="Développeur web front-end passionné, spécialisé dans la création de sites modernes et responsives.">
+  <meta property="og:image" content="assets/images/herman-photo.webp">
 
-  <link rel="stylesheet" href="css/styles.css">
-
-  <!-- favicon -->
-  <link rel='stylesheet'
-    href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-straight/css/uicons-solid-straight.css'>
-  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
-  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css'>
-
-
+  <link rel="icon" type="image/webp" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body>
-  <header>
-    <!-- Navbar -->
-    <nav class="navbar container">
-      <!-- LOGO  -->
-      <a href="index.html" class="logo">Herman</a>
 
-      <!-- Navbar links -->
-      <ul class="nav-links">
-        <li><a href="#about" class="active-link">À propos</a></li>
-        <li><a href="#project">Projets</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contacts</a></li>
-      </ul>
+  <!-- Header -->
+  <header class="header header--dark" id="top">
+    <div class="container">
+      <nav class="navbar">
 
-      <!-- Mobile Menu -->
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
+        <a href="index.html" class="navbar__logo">
+          <span class="navbar__logo-text">HERMAN</span>
+        </a>
+
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="#about" class="navbar__link link-underline">À propos</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#projects" class="navbar__link link-underline">Projets</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#services" class="navbar__link link-underline">Services</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#contact" class="navbar__link link-underline">Contacts</a>
+          </li>
+        </ul>
+
+        <button class="navbar__hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span class="navbar__icon navbar__icon--menu">☰</span>
+          <span class="navbar__icon navbar__icon--close">✕</span>
+        </button>
+
+      </nav>
+    </div>
   </header>
 
   <main>
-    <!-- Banner section -->
-    <section id="banner" class="container">
-      <div class="profil-infos">
-        <h1>Hello, je suis<br> <span>Herman Audrey TOSSAVI</span></h1>
-        <h2>Développeur Web</h2>
-        <p>Développeur web front-end passionné, spécialisé dans la création de sites modernes, optimisés et adaptés à
-          tous les
-          écrans. J’utilise HTML, CSS, JavaScript et les outils web actuels pour transformer des idées en expériences
-          visuelles
-          efficaces.</p>
-        <div>
-          <a href="cv/Herman A. TOSSAVI_CV_Developpeur_Web.pdf" download class="btn-first-style">Mon CV</a>
-          <a href="#project" class="btn-first-style">Mes Projets</a>
-        </div>
-      </div>
-      <img src="img/photo_de_herman.jpeg" alt="image_of_Herman_TOSSAVI" class="profil-picture">
-    </section>
 
-    <!-- Section About -->
-    <section id="about" class="container">
-      <h1>À <span>propos</span></h1>
+    <!-- Hero -->
+    <section class="portfolio-hero" id="top">
+      <div class="container">
+        <div class="two-col ">
 
-      <div class="about-container">
-
-        <img src="img/aboutme-image-removebg-preview.png" alt="">
-
-        <div class="about-infos">
-          <h2>À propos de moi</h2>
-          <p>Je suis un développeur web front-end autodidacte, passionné par la conception d’interfaces propres,
-            intuitives et bien
-            structurées. J’aime créer des sites rapides, responsives et attractifs, en mettant toujours l’expérience
-            utilisateur au
-            centre.
-            <br>
-            <br>
-            <strong>Mon objectif est simple :</strong> développer des solutions web modernes qui respectent
-            les bonnes pratiques du code, du design et du SEO. J’apprends en
-            continu, je teste, j’améliore et je m’adapte aux besoins de chaque projet.
-          </p>
-          <div class="experiences-container">
-            <div class="item">
-              <h3>01+</h3>
-              <p>Années d'expérience</p>
+          <div class="two-col__left animate">
+            <div class="portfolio-hero__intro">
+              <p class="portfolio-hero__hello">Hello, je suis</p>
+              <h1 class="portfolio-hero__name">
+                Herman Audrey<br>
+                <span class="portfolio-hero__name--accent">TOSSAVI</span>
+              </h1>
+              <h2 class="portfolio-hero__role">Développeur Web (Front - End)</h2>
             </div>
-            <div class="item">
-              <h3>XXX+</h3>
-              <p>Clients satisfaits</p>
-            </div>
-            <div class="item">
-              <h3>XXX+</h3>
-              <p>Projet terminé</p>
-            </div>
-            <div class="item">
-              <h3>XXX+</h3>
-              <p>Projet terminé</p>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Slider  -->
-      <h1>Mes <span>Compétences</span></h1>
-      <h2>Compétences</h2>
-      <div class="skills-container">
-        <div class="skill-item">HTML5</div>
-        <div class="skill-item">CSS3</div>
-        <div class="skill-item">JavaScript</div>
-        <div class="skill-item">Responsive Design</div>
-        <div class="skill-item">Bootstrap</div>
-        <div class="skill-item">Wordpress</div>
-        <div class="skill-item">PHP (Base)</div>
-        <div class="skill-item">MySQL (Base)</div>
-        <div class="skill-item">Python Flask (Base)</div>
-        <div class="skill-item">Base en SEO technique</div>
-        <div class="skill-item">Responsive Design</div>
-      </div>
-
-      <h2>Outils collaboratifs</h2>
-      <div class="skills-container">
-        <div class="skill-item">Github</div>
-        <div class="skill-item">Trello</div>
-        <div class="skill-item">Notion</div>
-        <div class="skill-item">Google Meet</div>
-        <div class="skill-item">Microsoft Teams</div>
-      </div>
-
-      <h2>Autres Compétences</h2>
-      <div class="skills-container">
-        <div class="skill-item">Tests fonctionnels</div>
-        <div class="skill-item">Rédaction technique</div>
-        <div class="skill-item">Integration front-end</div>
-        <div class="skill-item">Gestion de projet web</div>
-        <div class="skill-item">Débogage et tests</div>
-        <div class="skill-item">Organisation</div>
-        <div class="skill-item">Esprit d’analyse</div>
-        <div class="skill-item">Capacité d’apprentissage rapide</div>
-      </div>
-
-      <div class="slider">
-
-        <div class="slider-container">
-          <div class="slide"><i class="fi fi-brands-bootstrap bootstrap"></i></div>
-          <div class="slide"><i class="fi fi-brands-html5 html"></i></div>
-          <div class="slide"><i class="fi fi-brands-atom react"></i></div>
-          <div class="slide"><i class="fi fi-brands-css3 css"></i></div>
-          <div class="slide"><i class="fi fi-brands-wordpress wordpress"></i></div>
-          <div class="slide"><i class="fi fi-brands-js js"></i></div>
-          <div class="slide"><i class="fi fi-brands-github github"></i></div>
-
-          <!-- Duplicate the slide element -->
-          <div class="slide"><i class="fi fi-brands-bootstrap bootstrap"></i></div>
-          <div class="slide"><i class="fi fi-brands-html5 html"></i></div>
-          <div class="slide"><i class="fi fi-brands-atom react"></i></div>
-          <div class="slide"><i class="fi fi-brands-css3 css"></i></div>
-          <div class="slide"><i class="fi fi-brands-wordpress wordpress"></i></div>
-          <div class="slide"><i class="fi fi-brands-js js"></i></div>
-          <div class="slide"><i class="fi fi-brands-github github"></i></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Project section -->
-    <section id="project" class="container">
-      <h1>Mes <span>Projets</span></h1>
-      <div class="project-container">
-
-        <div>
-          <img src="img/projet-konoblog.png" alt="">
-          <h2>Projet 1 : Blog - Konoblog</h2>
-          <p>
-            <strong>Description :</strong>
-            Réalisation du front-end d'un blog dédié aux anime en utilisant HTML et CSS.
-            Design d'une interface utilisateur intuitive et esthétique.
-            <br>
-            <br>
-            <strong>Technologies utilisées :</strong>
-            <br>
-            HTML5, CSS3, Git, Github, Gestion de projet, Responsive design
-            <br>
-            <br>
-            <strong>Fonctionnalités :</strong>
-            <br>
-          </p>
-          <ul>
-            <li>Sections structurées</li>
-            <li>Responsive design</li>
-            <li>Affichage dynamique</li>
-            <li>UI simple et intuitive</li>
-          </ul>
-          <a href="https://herman-pro.github.io/KonoBlog/" class="btn-second-style" target="_blank">Voir le site</a>
-        </div>
-
-        <div>
-          <img src="img/projet-digilum.png" alt="">
-          <h2>Projet 2 : Digilum</h2>
-          <p>
-            <strong>Description :</strong>
-            Dans le cadre de mon stage, j’ai participé au développement et à la mise en ligne d’un site web dynamique
-            pour
-            Digilum .
-            Le projet visait à améliorer la visibilité en ligne de l’entreprise en créant un site pour mettre en avant
-            les
-            services
-            de l'entreprise.
-            <br>
-            <br>
-            <strong>Fonctionnalités :</strong>
-          </p>
-          <ul>
-            <li>Affichage dynamique</li>
-            <li>Responsive design</li>
-            <li>Animations fluides</li>
-            <li>Personalisation HTML/CSS</li>
-            <li>UI simple et intuitive</li>
-          </ul>
-          <a href="https://digilum.net/" class="btn-second-style" target="_blank">Voir le site</a>
-        </div>
-
-        <div>
-          <img src="img/project-cias-ssr.png" alt="">
-          <h2>Projet 3 : CIAS-SSR</h2>
-          <p>
-            <strong>Description :</strong>
-            Dans le cadre de mon stage, j’ai participé au développement et à la mise en ligne d’un site web dynamique
-            pour une ONG.
-            Le projet visait à créer une plateforme interactive pour que les utilisateurs participent à une conférence
-            internationale.
-            <br>
-            <br>
-            <strong>Fonctionnalités :</strong>
-          </p>
-          <ul>
-            <li>Responsive design</li>
-            <li>Affichage dynamique</li>
-            <li>Animations fluides</li>
-            <li>Personalisation HTML/CSS, bootstrap</li>
-          </ul>
-          <a href="https://cias-ssr-abpf.org/" class="btn-second-style" target="_blank">Voir le site</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services section -->
-    <section id="services" class="container">
-      <h1>Mes <span>Services</span></h1>
-      <div class="services-container">
-        <div class="services-presentation">
-          <h2>Qu'est ce que je fait?</h2>
-          <p>Je propose des services de développement web front-end pensés pour offrir des sites modernes, rapides et
-            adaptés à vos
-            besoins. Que ce soit pour présenter votre activité, lancer une campagne ou améliorer votre présence en
-            ligne, je conçois
-            des solutions efficaces, responsives et optimisées pour offrir la meilleure expérience aux utilisateurs.</p>
-        </div>
-        <div class="services-details">
-          <div>
-            <h3>Création de sites vitrines modernes</h3>
-            <p>Je conçois des sites vitrines professionnels pour mettre en valeur votre entreprise, vos services ou vos
-              projets. Le
-              design est clair, l’interface est fluide et le contenu est organisé pour aider vos visiteurs à comprendre
-              rapidement ce
-              que vous faites.
+            <p class="portfolio-hero__desc">
+              Développeur web front-end passionné, spécialisé dans la création
+              de sites modernes, optimisés et adaptés à tous les écrans.
+              J'utilise HTML, CSS, JavaScript et les outils web actuels pour
+              transformer des idées en expériences visuelles efficaces.
             </p>
-            <a href=" https://wa.me/qr/ILQAFKIFTUK7C1" target="_blank">En savoir plus</a>
+
+            <div class="hero__actions">
+              <a href="assets/cv/Herman_A _TOSSAVI_CV_Développeur_front-end_junior.pdf" target="_blank" rel="noopener noreferrer"
+                class="btn btn--primary">
+                Mon CV
+              </a>
+              <a href="#projects" class="btn btn--outline">
+                Mes Projets
+              </a>
+            </div>
+
           </div>
 
-          <div>
-            <h3>Développement de landing pages efficaces</h3>
-            <p>Je réalise des landing pages pensées pour convertir vos visiteurs. Chaque élément est conçu pour attirer
-              l’attention,
-              présenter votre offre et encourager l’action souhaitée (inscription, achat, demande de contact, etc.).
-            </p>
-            <a href=" https://wa.me/qr/ILQAFKIFTUK7C1" target="_blank">En savoir plus</a>
+          <div class="two-col__right animate">
+            <div class="portfolio-hero__photo-wrap">
+              <img src="assets/images/herman-photo.webp" alt="Herman Audrey Tossavi, développeur web front-end"
+                class="portfolio-hero__photo">
+            </div>
           </div>
 
-          <div>
-            <h3>Intégration HTML, CSS et JavaScript</h3>
-            <p>J’intègre vos maquettes en un site web fidèle, propre et performant. Le code est organisé, le rendu
-              respecte votre
-              design et le site fonctionne parfaitement sur tous types d’appareils.
-            </p>
-            <a href=" https://wa.me/qr/ILQAFKIFTUK7C1" target="_blank">En savoir plus</a>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container">
-      <h1>Contactez <span>- Moi</span></h1>
-      <div class="contact-container">
-        <div class="contact-infos">
-          <h2>Parlons de vos projets</h2>
-          <p>Besoin d’un développeur web front-end pour créer ou améliorer votre site ? Que vous soyez une entreprise,
-            un particulier
-            ou un porteur de projet, je suis disponible pour collaborer et donner vie à vos idées.</p>
-          <div class="contact-details">
+    <!-- À propos -->
+    <section class="about section section--gray" id="about">
+      <div class="container">
 
-            <!-- Address info -->
-            <div class="info-detail">
-              <i class="fi fi-sr-marker"></i>
-              <div>
-                <h6>Address :</h6>
-                <p>Cotonou, Benin</p>
-              </div>
-            </div>
+        <div class="two-col two-col--reverse">
 
-            <!-- Email info -->
-            <div class="info-detail">
-              <i class="fi fi-sr-envelope"></i>
-              <div>
-                <h6>Email :</h6>
-                <p>herman.tossavi.pro@gmail.com</p>
-              </div>
-            </div>
+          <div class="two-col__left animate">
+            <h2 class="section__title">À propos <span class="text--accent">de moi</span></h2>
 
-            <!-- Phone info -->
-            <div class="info-detail">
-              <i class="fi fi-ss-phone-call"></i>
-              <div>
-                <h6>Phone Number :</h6>
-                <p>+229 01 52 14 49 49</p>
-              </div>
-            </div>
+            <p class="about__text">
+              Je suis un développeur web front-end autodidacte, passionné
+              par la conception d'interfaces propres, intuitives et bien
+              structurées. J'aime créer des sites rapides, responsives et
+              attractifs, en mettant toujours l'expérience utilisateur au centre.
+            </p>
 
+            <p class="about__text">
+              <strong>Mon objectif est simple :</strong> développer des solutions
+              web modernes qui respectent les bonnes pratiques du code, du design
+              et du SEO. J'apprends en continu, je teste, j'améliore et je
+              m'adapte aux besoins de chaque projet.
+            </p>
+
+            <ul class="stats-grid" role="list">
+              <li class="stat-card">
+                <span class="stat-card__number">01+</span>
+                <span class="stat-card__label">Années d'expérience</span>
+              </li>
+              <li class="stat-card">
+                <span class="stat-card__number">5+</span>
+                <span class="stat-card__label">Clients satisfaits</span>
+              </li>
+              <li class="stat-card">
+                <span class="stat-card__number">5+</span>
+                <span class="stat-card__label">Projets terminés</span>
+              </li>
+              <li class="stat-card">
+                <span class="stat-card__number">2+</span>
+                <span class="stat-card__label">Stages effectués</span>
+              </li>
+            </ul>
           </div>
 
-          <div class="social-icon">
-            <a href="https://www.linkedin.com/in/herman-tossavi-201923279/" target="_blank"><i class="fi fi-brands-linkedin"></i></a>
-            <a href="https://github.com/Herman-Pro/" target="_blank"><i class="fi fi-brands-github"></i></a>
-            <a href="https://x.com/EclipSmile" target="_blank"><i class="fi fi-brands-twitter-alt"></i></a>
-            <a href="#" target="_blank"><i class="fi fi-brands-facebook"></i></a>
+          <div class="two-col__right animate">
+            <img src="assets/images/about-illustration.webp" alt="Illustration développement web"
+              class="about__illustration">
           </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Compétences -->
+    <section class="skills section" id="skills">
+      <div class="container">
+
+        <div class="section__header">
+          <h2 class="section__title">
+            MES <span class="text--accent">COMPÉTENCES</span>
+          </h2>
         </div>
 
-        <div class="form-contact">
-          <p>Pour toute demande de création de site, d'amélioration d’un projet existant ou de collaboration, utilisez
-            le formulaire
-            de contact ci-dessous. Je vous répondrai dans les plus brefs délais afin de discuter de votre projet et vous
-            proposer
-            une solution efficace.</p>
-          <form action="">
-            <div class="name-infos">
-              <input type="text" placeholder="Prenom*" required>
-              <input type="text" placeholder="Nom*" required>
-            </div>
-            <input type="email" placeholder="Mail*" required>
-            <input type="text" placeholder="Objet" required>
-            <textarea cols="20" rows="4" placeholder="Message*" required></textarea>
-            <button type="submit">Envoyer</button>
-          </form>
-          </divclass>
+        <!-- Compétences techniques -->
+        <div class="skills__group animate">
+          <h3 class="skills__group-title">
+            <span class="text--accent">Compétences</span>
+          </h3>
+          <ul class="three-col" role="list">
+            <li class="skill-tag">HTML5</li>
+            <li class="skill-tag">CSS3</li>
+            <li class="skill-tag">JavaScript</li>
+            <li class="skill-tag">Responsive Design</li>
+            <li class="skill-tag">Bootstrap</li>
+            <li class="skill-tag">WordPress</li>
+            <li class="skill-tag">PHP (Base)</li>
+            <li class="skill-tag">MySQL (Base)</li>
+            <li class="skill-tag">Python Flask (Base)</li>
+            <li class="skill-tag">SEO technique</li>
+          </ul>
         </div>
+
+        <!-- Outils collaboratifs -->
+        <div class="skills__group animate">
+          <h3 class="skills__group-title">
+            <span class="text--accent">Outils collaboratifs</span>
+          </h3>
+          <ul class="three-col" role="list">
+            <li class="skill-tag">Github</li>
+            <li class="skill-tag">Trello</li>
+            <li class="skill-tag">Notion</li>
+            <li class="skill-tag">Google Meet</li>
+            <li class="skill-tag">Microsoft Teams</li>
+          </ul>
+        </div>
+
+        <!-- Autres compétences -->
+        <div class="skills__group animate">
+          <h3 class="skills__group-title">
+            <span class="text--accent">Autres Compétences</span>
+          </h3>
+          <ul class="three-col" role="list">
+            <li class="skill-tag">Tests fonctionnels</li>
+            <li class="skill-tag">Rédaction technique</li>
+            <li class="skill-tag">Intégration front-end</li>
+            <li class="skill-tag">Gestion de projet web</li>
+            <li class="skill-tag">Débogage et tests</li>
+            <li class="skill-tag">Organisation</li>
+            <li class="skill-tag">Esprit d'analyse</li>
+            <li class="skill-tag">Apprentissage rapide</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Projets -->
+    <section class="projects section section--dark" id="projects">
+      <div class="container">
+
+        <div class="section__header">
+          <h2 class="section__title section__title--light">
+            MES <span class="text--accent">PROJETS</span>
+          </h2>
+        </div>
+
+        <ul class="two-col-grid" role="list">
+
+          <li class="project-card animate">
+            <div class="project-card__media">
+              <img src="assets/images/project-konoblog.webp" alt="Capture du projet Konoblog" class="project-card__img">
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">
+                Projet 1 : Blog — <span class="text--accent">Konoblog</span>
+              </h3>
+              <p class="project-card__desc">
+                Réalisation du frontend d'un blog dédié aux anime en utilisant
+                HTML et CSS. Design d'une interface utilisateur intuitive et esthétique.
+              </p>
+              <ul class="project-card__features" role="list">
+                <li>Sections structurées</li>
+                <li>Responsive design</li>
+                <li>Affichage dynamique</li>
+                <li>UI simple et intuitive</li>
+              </ul>
+
+              <a href="https://herman-pro.github.io/KonoBlog/index.html" target="_blank" rel="noopener noreferrer"
+                class="btn btn--primary">
+                Voir le site
+              </a>
+            </div>
+          </li>
+
+          <li class="project-card animate">
+            <div class="project-card__media">
+              <img src="assets/images/project-digilum.webp" alt="Capture du projet Digilum" class="project-card__img">
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">
+                Projet 2 : <span class="text--accent">Digilum</span>
+              </h3>
+              <p class="project-card__desc">
+                Dans le cadre de mon stage, j'ai participé au développement
+                et à la mise en ligne d'un site web dynamique pour Digilum,
+                visant à améliorer la visibilité en ligne de l'entreprise.
+              </p>
+              <ul class="project-card__features" role="list">
+                <li>Affichage dynamique</li>
+                <li>Responsive design</li>
+                <li>Animations fluides</li>
+                <li>UI simple et intuitive</li>
+              </ul>
+
+              <a href="https://digilum.net" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+                Voir le site
+              </a>
+            </div>
+          </li>
+
+          <li class="project-card animate">
+            <div class="project-card__media">
+              <img src="assets/images/project-cias.webp" alt="Capture du projet CIAS-SSR" class="project-card__img">
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">
+                Projet 3 : <span class="text--accent">CIAS-SSR</span>
+              </h3>
+              <p class="project-card__desc">
+                Dans le cadre de mon stage, j'ai participé au développement
+                d'un site web dynamique pour une ONG, créant une plateforme
+                interactive pour une conférence internationale.
+              </p>
+              <ul class="project-card__features" role="list">
+                <li>Responsive design</li>
+                <li>Affichage dynamique</li>
+                <li>Animations fluides</li>
+                <li>Personnalisation HTML/CSS</li>
+              </ul>
+
+              <a href="https://cias-ssr-abpf.org/" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+                Voir le site
+              </a>
+            </div>
+          </li>
+
+          <li class="project-card animate">
+            <div class="project-card__media">
+              <img src="assets/images/project-kodia.webp" alt="Capture du site KODIA Agency" class="project-card__img">
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">
+                Projet 4 : <span class="text--accent">KODIA Agency</span>
+              </h3>
+              <p class="project-card__desc">
+                Conception et développement du site vitrine de mon agence web
+                KODIA, spécialisée dans les solutions digitales pour les PME
+                béninoises.
+              </p>
+              <ul class="project-card__features" role="list">
+                <li>Kit UI personnel réutilisable</li>
+                <li>Responsive design mobile-first</li>
+                <li>Formulaire de contact fonctionnel</li>
+                <li>Animations au scroll</li>
+              </ul>
+
+              <a href="https://kodia-digital.netlify.app" target="_blank" rel="noopener noreferrer"
+                class="btn btn--primary">
+                Voir le site
+              </a>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services section" id="services">
+      <div class="container">
+
+        <div class="section__header">
+          <h2 class="section__title">
+            MES <span class="text--accent">SERVICES</span>
+          </h2>
+        </div>
+
+        <div class="services__intro animate">
+          <h3 class="services__intro-title">
+            <span class="text--accent">Qu'est-ce que je fais ?</span>
+          </h3>
+          <p class="services__intro-desc">
+            Je propose des services de développement web front-end pensés
+            pour offrir des sites modernes, rapides et adaptés à vos besoins.
+            Que ce soit pour présenter votre activité, lancer une campagne ou
+            améliorer votre présence en ligne, je conçois des solutions
+            efficaces, responsives et optimisées pour la meilleure expérience
+            utilisateur.
+          </p>
+        </div>
+
+        <ul class="services__list" role="list">
+
+          <li class="service-item animate">
+            <div class="service-item__body">
+              <h3 class="service-item__title">
+                Création de sites vitrines modernes
+              </h3>
+              <p class="service-item__desc">
+                Je conçois des sites vitrines professionnels pour mettre en
+                valeur votre entreprise, vos services ou vos projets. Le design
+                est clair, l'interface est fluide et le contenu est organisé pour
+                aider vos visiteurs à comprendre rapidement ce que vous faites.
+              </p>
+              <a href="#contact" class="service-item__link">En savoir plus</a>
+            </div>
+          </li>
+
+          <li class="service-item animate">
+            <div class="service-item__body">
+              <h3 class="service-item__title">
+                Développement de landing pages efficaces
+              </h3>
+              <p class="service-item__desc">
+                Je réalise des landing pages pensées pour convertir vos visiteurs.
+                Chaque élément est conçu pour attirer l'attention, présenter votre
+                offre et encourager l'action souhaitée — inscription, achat,
+                demande de contact.
+              </p>
+              <a href="#contact" class="service-item__link">En savoir plus</a>
+            </div>
+          </li>
+
+          <li class="service-item animate">
+            <div class="service-item__body">
+              <h3 class="service-item__title">
+                Intégration HTML, CSS et JavaScript
+              </h3>
+              <p class="service-item__desc">
+                J'intègre vos maquettes en un site web fidèle, propre et
+                performant. Le code est organisé, le rendu respecte votre design
+                et le site fonctionne parfaitement sur tous types d'appareils.
+              </p>
+              <a href="#contact" class="service-item__link">En savoir plus</a>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact section section--dark" id="contact">
+      <div class="container">
+
+        <div class="section__header">
+          <h2 class="section__title section__title--light">
+            CONTACTEZ <span class="text--accent">— MOI</span>
+          </h2>
+        </div>
+
+        <div class="two-col contact__layout">
+
+          <!-- Infos gauche -->
+          <div class="two-col__left animate">
+            <div class="contact__intro">
+              <h3 class="contact__intro-title">Parlons de vos projets</h3>
+              <p class="contact__intro-desc">
+                Besoin d'un développeur web front-end pour créer ou améliorer
+                votre site ? Que vous soyez une entreprise, un particulier ou
+                un porteur de projet, je suis disponible pour collaborer et
+                donner vie à vos idées.
+              </p>
+            </div>
+
+            <ul class="contact__details" role="list">
+              <li class="contact__detail-item">
+                <div class="contact__detail-icon">
+                  <i class="fi fi-br-marker"></i>
+                </div>
+                <div class="contact__detail-text">
+                  <span class="contact__detail-label">Adresse</span>
+                  <span class="contact__detail-value">Cotonou, Bénin</span>
+                </div>
+              </li>
+              <li class="contact__detail-item">
+                <div class="contact__detail-icon">
+                  <i class="fi fi-br-envelope"></i>
+                </div>
+                <div class="contact__detail-text">
+                  <span class="contact__detail-label">Email</span>
+
+                  <a href="mailto:herman.tossavi.pro@gmail.com"
+                  class="contact__detail-value contact__detail-value--link"
+                  >
+                  herman.tossavi.pro@gmail.com
+                  </a>
+                </div>
+              </li>
+              <li class="contact__detail-item">
+                <div class="contact__detail-icon">
+                  <i class="fi fi-br-phone-call"></i>
+                </div>
+                <div class="contact__detail-text">
+                  <span class="contact__detail-label">Téléphone</span>
+
+                  <a href="tel:+22901521449"
+                  class="contact__detail-value contact__detail-value--link"
+                  >
+                  +229 01 52 14 49 49
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Formulaire droite -->
+          <div class="two-col__right animate">
+            <form class="contact-form contact-form--dark" action="https://formspree.io/f/mlgpagye" method="POST"
+              novalidate>
+
+              <div class="contact-form__row">
+                <div class="form-group">
+                  <input type="text" id="firstname" name="firstname" class="form-input form-input--line"
+                    placeholder="Prénom*" autocomplete="given-name">
+                </div>
+                <div class="form-group">
+                  <input type="text" id="lastname" name="lastname" class="form-input form-input--line"
+                    placeholder="Nom*" autocomplete="family-name">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <input type="email" id="email" name="email" class="form-input form-input--line" placeholder="Mail*"
+                  autocomplete="email">
+              </div>
+
+              <div class="form-group">
+                <input type="text" id="subject" name="_subject" class="form-input form-input--line" placeholder="Objet">
+              </div>
+
+              <div class="form-group">
+                <textarea id="message" name="message" class="form-textarea form-input--line" rows="4"
+                  placeholder="Message*"></textarea>
+              </div>
+
+              <div class="contact-form__submit">
+                <button type="submit" class="btn btn--primary">
+                  Envoyer
+                </button>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <div class="footer-container container" >
-      <div class="footer-contact">
-        <h6>Email</h6>
-        <p>herman.tossavi.pro@gmail.com</p>
-
-        <h6>Phone Number</h6>
-        <p>+229 01 52 14 49 49</p>
+  <footer class="portfolio-footer">
+    <div class="container">
+  
+      <div class="portfolio-footer__content">
+  
+        <!-- Coordonnées -->
+        <div class="portfolio-footer__contact">
+  
+          <a href="mailto:herman.tossavi.pro@gmail.com"
+          class="portfolio-footer__contact-link"
+          >
+          herman.tossavi.pro@gmail.com
+          </a>
+  
+          <a href="tel:+22901521449"
+          class="portfolio-footer__contact-link"
+          >
+          +229 01 52 14 49 49
+          </a>
+        </div>
+  
+        <!-- Navigation -->
+        <nav aria-label="Navigation footer">
+          <ul class="portfolio-footer__nav" role="list">
+            <li>
+              <a href="#about" class="portfolio-footer__nav-link">À propos</a>
+            </li>
+            <li>
+              <a href="#projects" class="portfolio-footer__nav-link">Projets</a>
+            </li>
+            <li>
+              <a href="#services" class="portfolio-footer__nav-link">Services</a>
+            </li>
+            <li>
+              <a href="#contact" class="portfolio-footer__nav-link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+  
+        <!-- Réseaux sociaux -->
+        <ul class="portfolio-footer__socials" role="list">
+          <li>
+  
+            <a href="https://www.linkedin.com/in/herman-tossavi-201923279/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="portfolio-footer__social-link"
+            aria-label="LinkedIn"
+            >
+            <i class="fi fi-brands-linkedin"></i>
+            </a>
+          </li>
+          <li>
+  
+            <a href="https://github.com/Herman-Pro/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="portfolio-footer__social-link"
+            aria-label="GitHub"
+            >
+            <i class="fi fi-brands-github"></i>
+            </a>
+          </li>
+          <li>
+  
+            <a href="https://x.com/EclipSmile"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="portfolio-footer__social-link"
+            aria-label="X"
+            >
+            <i class="fi fi-brands-twitter-alt"></i>
+            </a>
+          </li>
+          <li>
+  
+            <a href="https://www.facebook.com/eclip.smile.2025"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="portfolio-footer__social-link"
+            aria-label="Facebook"
+            >
+            <i class="fi fi-brands-facebook"></i>
+            </a>
+          </li>
+        </ul>
+  
       </div>
-      <div class="fast-link">
-        <a href="#about">À propos</a>
-        <a href="#project">Projets</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contacts</a>
+  
+      <!-- Copyright -->
+      <div class="portfolio-footer__bottom">
+        <p class="portfolio-footer__copyright">
+          © 2025 Herman TOSSAVI. Tous droits réservés.
+        </p>
       </div>
-      <div class="footer-social">
-        <a href="https://www.linkedin.com/in/herman-tossavi-201923279/" target="_blank"><i class="fi fi-brands-linkedin"></i></a>
-        <a href="https://github.com/Herman-Pro/"><i class="fi fi-brands-github"></i></a>
-        <a href="https://x.com/EclipSmile" target="_blank"><i class="fi fi-brands-twitter-alt"></i></a>
-        <a href="#" target="_blank"><i class="fi fi-brands-facebook"></i></a>
-      </div>
-    </div>
-    <div class="copyright">
-      <p>&copy; 2025 Herman TOSSAVI. Tous droits réservés.</p>
+  
     </div>
   </footer>
 
-  <script src="js/app.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/form.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>

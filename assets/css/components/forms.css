@@ -1,0 +1,300 @@
+/* ============================================================
+   FORMS — Composants de formulaire
+   Fichier : assets/css/components/forms.css
+   ============================================================ */
+
+
+/* ----------------------------------------------------------
+   FORM GROUP — Wrapper label + input
+
+   Regroupe un label et son champ dans un bloc vertical.
+   Gère l'espacement entre les groupes.
+---------------------------------------------------------- */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/*
+  flex-direction: column → label au-dessus, input en dessous.
+  gap: --space-2 (8px) → espace serré entre label et champ.
+  Ils sont liés — trop d'espace les dissocierait visuellement.
+*/
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding-right: var(--space-8);
+  padding-bottom: var(--space-4);
+}
+
+/*
+  gap: --space-4 (16px) entre chaque .form-group.
+  Espace suffisant pour distinguer les champs
+  sans alourdir le formulaire.
+
+  Pourquoi gap sur .contact-form et pas margin-bottom
+  sur chaque .form-group ?
+  → gap s'adapte automatiquement — si on retire un champ,
+  l'espacement reste cohérent partout.
+*/
+
+
+/* ----------------------------------------------------------
+   LABEL
+---------------------------------------------------------- */
+
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-gray-900);
+}
+
+/*
+  font-weight: 500 → légèrement plus gras que le texte normal.
+  Distingue le label du placeholder et de la valeur saisie.
+  Pas 700 — trop dominant pour un label de formulaire.
+*/
+
+
+/* ----------------------------------------------------------
+   INPUT & TEXTAREA
+---------------------------------------------------------- */
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font-size: 1rem;
+  color: var(--color-gray-900);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-base),
+    box-shadow var(--transition-base);
+  outline: none;
+}
+
+/*
+  width: 100% → le champ prend toute la largeur de son conteneur.
+  Sans ça, les inputs ont une largeur par défaut
+  qui varie selon les navigateurs — comportement imprévisible.
+
+  padding: --space-3 --space-4 (12px 16px) → zone de frappe confortable.
+  Ni trop petit (champ étriqué), ni trop grand (champ imposant).
+
+  border: 1px solid --color-border → bordure légère et visible.
+  Délimite clairement le champ sans l'alourdir.
+
+  border-radius: --radius-md (8px) → arrondi standard.
+  Les inputs sont plus petits que les cards — radius-md est proportionnel.
+
+  transition sur border-color ET box-shadow → on anime les deux
+  états focus et erreur proprement.
+
+  outline: none → supprime l'outline bleu par défaut des navigateurs.
+  On le remplace par notre propre style focus ci-dessous.
+  IMPORTANT : on ne supprime jamais outline sans le remplacer
+  — l'accessibilité clavier en dépend.
+*/
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--color-gray-400);
+}
+
+/*
+  --color-gray-400 → placeholder clairement plus clair
+  que le texte saisi (gray-900).
+  L'utilisateur voit immédiatement si le champ est rempli ou non.
+*/
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--color-primary-500);
+  box-shadow: 0 0 0 3px var(--color-primary-50);
+}
+
+/*
+  border-color: primary-500 → la bordure devient bleue au focus.
+  Signal visuel clair : ce champ est actif.
+
+  box-shadow: 0 0 0 3px primary-50 → halo bleu très léger autour du champ.
+  Remplace l'outline natif du navigateur — accessible et stylé.
+
+  Pourquoi box-shadow et pas outline ?
+  → box-shadow respecte le border-radius du champ.
+  outline ignore le border-radius — il reste carré même
+  sur un input arrondi. box-shadow donne un halo arrondi.
+*/
+
+
+/* ----------------------------------------------------------
+   TEXTAREA
+---------------------------------------------------------- */
+
+.form-textarea {
+  resize: vertical;
+  min-height: 8rem;
+}
+
+/*
+  resize: vertical → l'utilisateur peut agrandir verticalement.
+  On bloque le resize horizontal — ça casserait le layout.
+
+  min-height: 8rem → hauteur minimale confortable pour saisir un message.
+  Pas trop petit (3 lignes illisibles), pas trop grand (formulaire lourd).
+*/
+
+
+/* ----------------------------------------------------------
+   BOUTON PLEINE LARGEUR — Modificateur
+---------------------------------------------------------- */
+
+.btn--full {
+  width: 100%;
+}
+
+/*
+  Modificateur simple — le bouton prend toute la largeur
+  de son conteneur.
+  Utilisable sur n'importe quel .btn, pas seulement dans les formulaires.
+*/
+
+
+/* ----------------------------------------------------------
+   ÉTATS DE VALIDATION
+---------------------------------------------------------- */
+
+.form-input--error {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+/*
+  Même technique que le focus bleu —
+  bordure rouge + halo rouge très léger.
+  Cohérence visuelle des états du kit.
+*/
+
+.form-error {
+  font-size: 0.75rem;
+  color: #dc2626;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+/*
+  Petit texte rouge sous le champ en erreur.
+  Créé dynamiquement par JS — pas dans le HTML.
+*/
+
+
+/* ----------------------------------------------------------
+   NOTIFICATION GLOBALE
+---------------------------------------------------------- */
+
+.form-notification {
+  padding: var(--space-4) var(--space-6);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: var(--space-6);
+  opacity: 1;
+  transition: opacity 300ms ease;
+}
+
+.form-notification--success {
+  background-color: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+}
+
+.form-notification--error {
+  background-color: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+.form-notification--hiding {
+  opacity: 0;
+}
+
+/*
+  --hiding déclenche le fondu de sortie.
+  JS retire l'élément après 300ms —
+  le temps que l'animation se termine.
+*/
+
+/* ----------------------------------------------------------
+   FORM INPUT LINE — Champ avec seulement une ligne en bas
+   Utilisé dans le portfolio contact sur fond sombre
+---------------------------------------------------------- */
+
+.form-input--line {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0;
+  color: var(--color-white);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/*
+  background-color: transparent → fondu dans le fond sombre.
+  border: none → retire la bordure complète du .form-input de base.
+  border-bottom → garde uniquement la ligne en bas.
+  border-radius: 0 → pas d'arrondi — incompatible avec ce style.
+  color: white → texte saisi en blanc sur fond sombre.
+  padding left/right: 0 → aligné avec le texte alentour.
+*/
+
+.form-input--line::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/*
+  Placeholder blanc à 50% → visible mais clairement
+  distinct du texte saisi (blanc pur).
+*/
+
+.form-input--line:focus {
+  border-bottom-color: var(--color-primary-500);
+  box-shadow: none;
+}
+
+/*
+  Au focus → ligne du bas passe en rouge.
+  box-shadow: none → écrase le halo bleu du .form-input de base.
+  Le rouge est cohérent avec l'identité du portfolio.
+*/
+
+
+/* ----------------------------------------------------------
+   CONTACT FORM ROW — 2 champs côte à côte
+---------------------------------------------------------- */
+
+.contact-form__row {
+  display: flex;
+  gap: var(--space-6);
+}
+
+.contact-form__row .form-group {
+  flex: 1;
+}
+
+/*
+  flex: 1 sur chaque form-group → les deux champs
+  prennent exactement la même largeur.
+*/
+
+.contact-form__submit {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-4);
+}

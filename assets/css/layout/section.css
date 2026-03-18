@@ -1,0 +1,159 @@
+/* ============================================================
+   SECTION — Espacements verticaux des sections
+   Fichier : assets/css/layout/section.css
+
+   Rôle : gérer UNIQUEMENT le padding vertical des sections.
+   Chaque section de la page utilise .section comme base.
+   ============================================================ */
+
+.section {
+  padding-block: var(--space-16);
+}
+
+.section--sm {
+  padding-block: var(--space-10);
+}
+
+.section--lg {
+  padding-block: var(--space-20);
+}
+
+.section--gray {
+  background-color: var(--color-gray-50);
+}
+
+.section__header {
+  text-align: center;
+  margin-bottom: var(--space-10);
+}
+
+.section__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-2);
+}
+
+.section__subtitle {
+  color: var(--color-gray-700);
+  max-width: 36rem;
+  margin-inline: auto;
+}
+
+@media (min-width: 48rem) {
+  .section__title {
+    font-size: 2rem;
+  }
+}
+
+/* ----------------------------------------------------------
+   TITRE AVEC LIGNES DE PART ET D'AUTRE
+   
+   Usage :
+   <h2 class="section__title section__title--lined">Nos Services</h2>
+
+   Technique : flexbox sur le titre.
+   Les lignes sont des pseudo-éléments qui s'étirent
+   pour remplir l'espace restant de chaque côté.
+---------------------------------------------------------- */
+
+.section__title--lined {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+/*
+  display: flex → titre et ses deux pseudo-éléments
+  sont sur la même ligne.
+
+  align-items: center → les lignes sont centrées
+  verticalement par rapport au texte du titre.
+
+  gap: --space-4 (16px) → espace entre le texte
+  et les lignes de chaque côté.
+*/
+
+.section__title--lined::before,
+.section__title--lined::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background-color: var(--color-border);
+}
+
+/*
+  content: '' → obligatoire pour que les pseudo-éléments existent.
+
+  flex: 1 → les deux lignes prennent chacune
+  tout l'espace disponible de leur côté.
+  Résultat : elles s'étirent automatiquement
+  quelle que soit la longueur du titre.
+  Si le titre est court → lignes longues.
+  Si le titre est long → lignes courtes.
+  Toujours équilibré, sans calcul manuel.
+
+  height: 1px → trait fin et discret.
+
+  background-color: --color-border → même gris clair
+  que les bordures du kit — cohérence visuelle.
+
+  Pourquoi pseudo-éléments et pas 2 <span> dans le HTML ?
+  → Les lignes sont purement décoratives — elles n'ont
+  aucune valeur sémantique. Le CSS est le bon endroit
+  pour les décorations visuelles, pas le HTML.
+*/
+
+
+/* ----------------------------------------------------------
+   TITRE AVEC LIGNE EN DESSOUS
+
+   Usage :
+   <h2 class="section__title section__title--underlined">Titre</h2>
+
+   Simple border-bottom sur le titre.
+   Sépare visuellement le titre de son contenu.
+---------------------------------------------------------- */
+
+.section__title--underlined {
+  padding-bottom: var(--space-4);
+  border-bottom: 2px solid var(--color-border);
+  margin-bottom: var(--space-8);
+}
+
+.underlined {
+  padding-bottom: var(--space-4);
+  border-bottom: 2px solid var(--color-border);
+}
+
+/*
+  padding-bottom: --space-4 (16px) → espace entre
+  le texte du titre et la ligne en dessous.
+  Sans padding, la ligne collerait au texte.
+
+  border-bottom → la ligne séparatrice.
+
+  margin-bottom: --space-8 (32px) → espace entre
+  la ligne et le contenu qui suit (cards, grille...).
+
+  Pourquoi margin-bottom ici et pas sur .section__header ?
+  → .section__header a déjà margin-bottom: --space-10.
+  Si on utilise --underlined, on remplace ce comportement
+  par un espacement visuel contrôlé par la ligne elle-même.
+*/
+
+.section__header--left {
+  text-align: left;
+}
+
+.section__header--left .section__subtitle {
+  margin-inline: 0;
+}
+
+.section__title--light {
+  color: var(--color-white);
+}
+
+.section--dark {
+  background-color: var(--color-bg-dark);
+}

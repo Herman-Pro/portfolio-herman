@@ -1,0 +1,118 @@
+/* ===== Header V1 ===== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--color-white);
+}
+
+.header--shadow {
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: var(--space-sm);
+  position: relative;
+}
+
+/* ===== Logo ===== */
+
+.navbar__logo-image {
+  width: 7.5rem;
+  height: auto;
+}
+
+/* ===== Menu ===== */
+.navbar__menu {
+  display: none;
+  /* mobile-first hidden */
+  flex-direction: column;
+  gap: var(--space-md);
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--color-white);
+  width: 100%;
+  padding: var(--space-md);
+  list-style: none;
+}
+
+.navbar__item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.navbar__link {
+  font-family: var(--font-base);
+  color: var(--color-grey);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+
+/* ===== Hamburger ===== */
+.navbar__hamburger {
+  background: none;
+  border: none;
+  padding: var(--space-sm);
+  cursor: pointer;
+}
+
+.navbar__icon {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--color-primary-500);
+  line-height: 1;
+  display: inline-block;
+}
+
+.navbar__icon--close {
+  display: none;
+}
+
+/* ===== Hamburger open state ===== */
+.navbar__hamburger--open .navbar__icon--menu {
+  display: none;
+}
+
+.navbar__hamburger--open .navbar__icon--close {
+  display: inline-block;
+}
+
+/* ===== Menu visible ===== */
+.navbar__menu--show {
+  display: flex;
+}
+
+/* ===== Desktop ===== */
+@media (min-width: 48rem) {
+  .navbar__logo-image {
+    width: 9rem;
+  }
+
+  .navbar__hamburger {
+    display: none;
+  }
+
+  .navbar__menu {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    padding: 0;
+  }
+}
+
+@media (min-width: 64rem) {
+  .navbar__logo-image {
+    width: 11.3rem;
+  }
+}

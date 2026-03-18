@@ -1,0 +1,91 @@
+/* ============================================================
+   HELPERS — Classes utilitaires réutilisables
+   Fichier : assets/css/base/helpers.css
+   ============================================================ */
+
+
+/* ----------------------------------------------------------
+   LINK UNDERLINE — Soulignement animé au hover
+   
+   Utilisation :
+   <a class="link-underline">Mon lien</a>
+   <a class="link-underline link-underline--active">Page active</a>
+
+   Technique : pseudo-élément ::after animé avec scaleX()
+   → Le trait part de 0% à 100% de gauche à droite au hover.
+   → Sur le lien actif, le trait est toujours visible.
+---------------------------------------------------------- */
+
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-primary-500);
+  border-radius: var(--radius-sm);
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-base);
+}
+
+.link-underline:hover::after {
+  transform: scaleX(1);
+}
+
+.link-underline--active::after {
+  transform: scaleX(1);
+}
+
+.animate {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 700ms ease,
+    transform 700ms ease;
+}
+
+/*
+  opacity: 0 → invisible au départ.
+  translateY(24px) → décalé 24px vers le bas au départ.
+  
+  Pourquoi translateY et pas marginTop ?
+  → transform n'affecte pas le flux — les autres éléments
+  ne bougent pas. marginTop les déplacerait.
+  transform est aussi optimisé GPU — animation plus fluide.
+*/
+
+.animate.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*
+  Quand JS ajoute .is-visible →
+  opacity remonte à 1, translateY revient à 0.
+  La transition CSS fait le reste en 500ms.
+*/
+
+@media (prefers-reduced-motion: reduce) {
+  .animate {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/*
+  prefers-reduced-motion → certains utilisateurs
+  ont des troubles vestibulaires ou épileptiques.
+  Cette media query désactive les animations pour eux.
+  C'est une règle d'accessibilité importante.
+*/
+
+.text--accent {
+  color: var(--color-primary-500);
+}

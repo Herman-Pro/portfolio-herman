@@ -1,0 +1,31 @@
+/* ============================================================
+   PORTFOLIO SKILLS
+   Fichier : assets/css/patterns/portfolio-skills.css
+   ============================================================ */
+
+.skills__group {
+  margin-bottom: var(--space-10);
+}
+
+.skills__group:last-child {
+  margin-bottom: 0;
+}
+
+/*
+  margin-bottom sur chaque groupe → espace entre les 3 blocs.
+  :last-child → pas de marge en bas du dernier groupe.
+  Sans ça, le dernier groupe aurait un espace avant
+  le padding de la section — effet de double espacement.
+*/
+
+.skills__group-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-6);
+}
+
+/*
+  margin-bottom: --space-6 (24px) → espace entre
+  le sous-titre et la grille de tags en dessous.
+*/

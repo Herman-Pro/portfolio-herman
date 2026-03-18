@@ -1,0 +1,41 @@
+/* ============================================================
+   PORTFOLIO SERVICES
+   Fichier : assets/css/patterns/portfolio-services.css
+   ============================================================ */
+
+.services__intro {
+  text-align: center;
+  max-width: 42rem;
+  margin-inline: auto;
+  margin-bottom: var(--space-10);
+}
+
+.services__intro-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+}
+
+.services__intro-desc {
+  color: var(--color-gray-700);
+  line-height: 1.7;
+}
+
+.services__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 52rem;
+  margin-inline: auto;
+}
+
+/*
+  flex-direction: column → cards empilées verticalement.
+  C'est voulu — une seule colonne même sur desktop.
+  Les cards de service sont longues — 2 colonnes
+  les écraserait trop.
+
+  max-width: 52rem → on limite la largeur sur grand écran.
+  Des cards trop larges sont difficiles à lire.
+  margin-inline: auto → centré dans le container.
+*/

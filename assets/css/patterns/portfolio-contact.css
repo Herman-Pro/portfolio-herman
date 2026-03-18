@@ -1,0 +1,93 @@
+/* ============================================================
+   PORTFOLIO CONTACT
+   Fichier : assets/css/patterns/portfolio-contact.css
+   ============================================================ */
+
+.contact__layout {
+  align-items: flex-start;
+}
+
+.contact__intro {
+  margin-bottom: var(--space-8);
+}
+
+.contact__intro-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: var(--space-4);
+}
+
+.contact__intro-desc {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+}
+
+
+/* ----------------------------------------------------------
+   CONTACT DETAILS — Liste adresse / email / téléphone
+---------------------------------------------------------- */
+
+.contact__details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.contact__detail-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.contact__detail-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  color: var(--color-primary-500);
+  font-size: 1.125rem;
+}
+
+/*
+  background-color: rgba blanc 10% → pastille subtile
+  sur fond sombre. Ni trop visible, ni invisible.
+  border-radius: --radius-full → cercle parfait.
+  color: primary-500 → icône rouge — seul accent de couleur.
+*/
+
+.contact__detail-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.contact__detail-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-primary-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/*
+  Label en rouge uppercase → "ADRESSE", "EMAIL", "TÉLÉPHONE"
+  Crée une hiérarchie claire : label → valeur.
+*/
+
+.contact__detail-value {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.contact__detail-value--link {
+  transition: color var(--transition-base);
+}
+
+.contact__detail-value--link:hover {
+  color: var(--color-primary-500);
+}
